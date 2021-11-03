@@ -1,0 +1,143 @@
+#container{
+    width: 80%;
+    margin: 5% 10% 15% 10%;
+    display: flex;
+}
+#leftContainer{
+    width: 70%;
+}
+#rightContainer{
+    width: 30%;
+    height: 400px;
+    border: 1px solid rgb(219, 214, 214);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #f7f4f4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+}
+#titleDetails{
+    width: 100%;
+    height: 150px;
+    border: 1px solid rgb(219, 214, 214);
+}
+#graphDetails{
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(219, 214, 214);
+}
+.proDetails, .minAmountDetails{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+.detListLeft, .detListRight{
+    width: 50%;
+    border-right: 1px solid rgb(219, 214, 214);  
+}
+.detListRight{
+    border: none;
+}
+.points{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.subHead, #navValue, #sipValue, #ratingValue, #fundValue{
+    width: 50%;
+    height: 30%;
+    margin-top: 5%;
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+}
+#navValue, #sipValue, #ratingValue, #fundValue{
+    color: rgb(66, 64, 64);
+    font-weight: 540;
+    font-size: 15px;
+}
+#returnCalDetails{
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(219, 214, 214);
+}
+.returnRankings{
+    width: 100%;
+    margin-top: 40px;
+}
+h3{
+    color: rgb(68, 66, 66);
+    margin-left: 5%;
+}
+.returnRankingsTable{
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(219, 214, 214);
+    border-radius: 5px;
+}
+.rowStyle, .rowStyleLast{
+    height: 55px;
+    display: flex;
+    border-bottom: 1px solid rgb(219, 214, 214);
+}
+.rowDetOne, .rowDet{
+    width: 40%;
+    padding: 20px 0 0 15px;
+    font-size: 14px;
+    color: grey;
+}
+.rowDet{
+    width: 15%;
+    text-align: center;
+    color: rgb(66, 64, 64);
+}
+.rowStyleLast{
+    border-bottom: none;
+}
+#prosConsCont{
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+}
+#proBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.pros{
+    width: 50%;
+}
+.proDet, .proDetTwo{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.proDet i{
+    margin-left: 5%;
+    color: #00d09c;
+}
+.proDet div{
+    margin: 1% 0 0 3%;
+    color: rgb(49, 47, 47);
+    font-weight: 540;
+}
+.proDetTwo{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(219, 214, 214);;
+}
+.proPoints{
+    margin: 1% 0 0 5%;
+    color: grey;
+    font-size: 14px;
+}
+#thumbsDown{
+    color: rgb(209, 77, 77);
+}
+.minAmountDetails{
+    display: block;
+}
+.minAmountDetails .detListLeft .points{
+    width: 95%;
+    margin-left: 4%;
+}
