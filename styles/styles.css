@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+*{
+    font-family: sans-serif;
+}
+#header{
+    height: 80px;
+    display: flex;
+    border-bottom: 1px solid rgb(247, 235, 235);
+}
+#header img{
+    height: 50%;
+    margin: 1.3% 0 0 13%;
+    cursor: pointer;
+}
+#searchBox{
+    width: 30.5%;
+    height: 60%;
+    margin: 1.3% 0 0 17%;
+}
+#searchBox input{
+    width: 85%;
+    height: 60%;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 14px;
+    border: 1px solid rgb(219, 214, 214);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #f7f4f4;
+    outline: none;
+}
+#searchBox input:focus {
+    border: 1px solid rgb(219, 214, 214);
+}
+#searchBox i{
+    height: 20px;
+    position: absolute;
+    margin: 0.5% 0 0 0.8%;
+    color: gray;
+}
+#loginBtn{
+    height: 38%;
+    margin: 1.1% 0 0 5%;
+    padding: 12px 35px 0px 35px;
+    border: 1px solid #00d09c;
+    border-radius: 5px;
+    background-color: #00d09c;
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+#container{
+    margin: auto;
+    width: 80%;
+    height: 500px;
+}
+#footer{
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
+    display: flex;
+    background-color: #242633;
+}
