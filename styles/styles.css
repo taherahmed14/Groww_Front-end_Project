@@ -52,12 +52,12 @@ body{
     cursor: pointer;
 }
 #container{
-    margin: auto;
     width: 80%;
-    height: 500px;
+    margin: 5% 10% 15% 10%;
+    display: flex;
 }
 #footer{
-    width: 100%;
+    width: 99.8%;
     height: 350px;
     border: 1px solid black;
     display: flex;
