@@ -1,39 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groww - Products</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
-    <link rel = "stylesheet" href="/styles/styles.css">
-    
-</head>
-<body>
-    
-    <div id="header">
-        <img src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/diwali-groww-white.a851baed.gif">
-        <div id="searchBox">
-            <i class="material-icons">search</i>
-            <input type="text" placeholder="What are you looking for today?">
-        </div>
-        <div id="loginBtn">
-            <div>Login/Register</div>
-        </div>
-    </div>
 
-    <div id="container">
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Groww - Products</title>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
+       <link rel = "stylesheet" href="/styles/styles.css">
+       <style>
+           .filter_section{
+              display:inline-block;
+               width:200px;
+               height:200px;
+               border: 1px solid red;
+           }
+
+           .right{
+               width:800px;
+               margin-left: 50px;
+               margin-top: 60px;
+              
+               
+           }
+
+           .container{
+               display:flex;
+               
+           }
+           .icon{
+               width:35px;
+               height:35px;
+               padding:12px;
+               
+
+           }
+           .MFtext{
+              font-size: 1rem;
+              letter-spacing: 0.01em;
+              color:#44475b;
+              font-weight: 700;
+              display:inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+             
+           }
+
+           .MFdiv{
+               border:1px solid blue;
+               height:100px;
+           }
+
+           .returns{
+              
+               display:inline-block;
+               float:right;
+               margin-top: 30px;
+               margin-right: 35px;
+
+               font-size: 1rem;
+              letter-spacing: 0.01em;
+              color:#44475b;
+              font-weight: 700;
+              display:inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+           }
+
+           .left{
+               display:grid;
+               grid-template-columns: 200px;
+               margin-left: 2px;
+               
+               width:300px;
+           }
+          
+
+       </style>
+       
+   </head>
+   <body>
+       
+       <div id="header">
+           <img src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/diwali-groww-white.a851baed.gif">
+           <div id="searchBox">
+               <i class="material-icons">search</i>
+               <input type="text" placeholder="What are you looking for today?">
+           </div>
+           <div id="loginBtn">
+               <div>Login/Register</div>
+           </div>
+       </div>
+
+    <div id="container" class="container">
         
         <!-- Add your contents here -->
+        <div class="left">
+
+        <div class="filter_section">
+        <p>AMC</p>
+        <div class="box">
+            <input type="checkbox" value="Axis" class="checkbox" id="axis">
+            <label for="axisMF">Axis Mutual Fund</label> 
+        </div>
+        <div class="box">
+          <input type="checkbox" value="ICICI" class="checkbox" id="icici">
+          <label for="iciciMF">ICICI Prudential Technology</label> 
+      </div>
+      <div class="box">
+          <input type="checkbox" value="HDFC" class="checkbox" id="hdfc">
+          <label for="hdfcMF">HDFC</label> 
+      </div>
+      <div class="box">
+        <input type="checkbox" value="TATA" class="checkbox" id="tata">
+        <label for="tata">TATA Digital India</label> 
+    </div>
+ </div> 
+
+
+ <div class="filter_section">
+    <p>Category</p>
+    <div class="box">
+        <input type="checkbox" value="Debt" class="checkbox" >
+        <label for="">Debt</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="Equity" class="checkbox" >
+      <label for="">Equity</label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="Hybrid" class="checkbox" >
+      <label for="">Hybrid</label> 
+  </div>
+  <div class="box">
+    <input type="checkbox" value="others" class="checkbox" >
+    <label for="">Others</label> 
+</div>
+</div> 
+
+
+<div class="filter_section">
+    <p>Risk</p>
+    <div class="box">
+        <input type="checkbox" value="Low Risk" class="checkbox" >
+        <label for="">Low</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="Moderate Risk" class="checkbox" >
+      <label for="">Moderate </label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="High Risk" class="checkbox" >
+      <label for="">High</label> 
+  </div>
+ 
+</div> 
+
+
+
+</div>
+
+ 
+    
+ <div class="right" id="right"></div>
+    
 
     </div>
 
-    <div id="footer">
-        
-        <!-- Add footer contents here -->
+    
+    
 
-    </div>
+
+    
     
 </body>
 </html>
+</html>
+
+<script src="productapp.js">
+    
+
+</script>
