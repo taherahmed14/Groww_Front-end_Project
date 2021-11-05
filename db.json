@@ -8,7 +8,7 @@
       "risk": "High Risk",
       "category": "Equity",
       "rating": "5",
-      "percentage_interval": "[2.32%, 95.53%, 41.88%]",
+      "percentage_interval": ["Ford", "Vols", "Fiat"],
       "fund_Category": "4.5",
       "fund_size": "4532.50 Cr",
       "nav": "172.76",

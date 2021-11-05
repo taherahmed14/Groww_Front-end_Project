@@ -68,7 +68,10 @@
             let productName = document.createElement("div");
             productName.innerHTML = product.product_name;
 
-            div.append(productImg, productName);
+            let intervalOne = document.createElement("div");
+            intervalOne.innerHTML = product.percentage_interval;
+        
+            div.append(productImg, productName, intervalOne);
             prodContainer.append(div);
         });
     }
