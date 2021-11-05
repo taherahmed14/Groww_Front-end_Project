@@ -46,32 +46,41 @@ function amc(x){
 
     } );
     
-    viewMf(arr)
+    viewMff(arr)
 }
 
 
 
+let cont=0;
+
+let parent = document.getElementById("right") ;
 
 
-let parent = document.getElementById("Mutual") ;
 
+// this function will Run only when we invoke the tickmark 
+function viewMff( d){
+    
+    if(cont==0)
+    {
+        parent.innerHTML = null;
+        cont++;
+
+    }
    
-
-
-function viewMf( d){
-
-    parent.innerHTML = null;
    
     d.forEach( function ( el)
     {
        // console.log("im in" , el)
     let div = document.createElement('div');
+    div.setAttribute("class" , "MFdiv")
 
   
     
     
     let img = document.createElement('img');
     img.src= el.product_image;
+    img.setAttribute("class" , "icon")
+    
     
 
     let amc = document.createElement('p');
@@ -81,12 +90,23 @@ function viewMf( d){
 
     let name = document.createElement('p');
     name.textContent= el.product_name;
+    name.setAttribute("class" , "MFtext");
+
+
+    let ch = document.createElement('div');
+    ch.innerHTML= el.percentage_interval[0];
+    ch.setAttribute("class" , "returns" )
+    
     
    
 
 
     
-      div.append( img , name , amc )
+      div.append( img , name , ch)
+
+      div.onclick = function () {
+        referData(el)
+    }
     
       parent.append(div);
     
@@ -95,7 +115,86 @@ function viewMf( d){
      } );
 
 
+}
+
+
+
+
+
+
+   
+
+// this function will Run first to load all the funds name and details
+function viewMf( d){
+
+    parent.innerHTML = null;
+   
+    d.forEach( function ( el)
+    {
+       // console.log("im in" , el)
+    let div = document.createElement('div');
+    div.setAttribute("class" , "MFdiv")
+
+  
+    
+    
+    let img = document.createElement('img');
+    img.src= el.product_image;
+    img.setAttribute("class" , "icon")
+    
+    
+
+    let amc = document.createElement('p');
+    amc.textContent = el.amc;
+   
+
+
+    let name = document.createElement('p');
+    name.textContent= el.product_name;
+    name.setAttribute("class" , "MFtext");
+
+
+    let ch = document.createElement('p');
+    ch.textContent= el.percentage_interval;
+    ch.setAttribute("class" , "returns" )
+    
+    
+   
+
+
+    
+      div.append( img , name , ch)
+
+      div.onclick = function () {
+        referData(el)
+    }
+    
+      parent.append(div);
+    
+    
+    
+     } );
 
 
 }
+
+if (localStorage.getItem("itemData") == null) {
+    localStorage.setItem("itemData", JSON.stringify([]));
+}
+
+
+function referData(p) {
+
+    var ProductDes = JSON.parse(localStorage.getItem("itemData"));
+
+    ProductDes = [];
+
+    ProductDes.push(p);
+    console.log("pushed" , p)
+
+    localStorage.setItem("itemData", JSON.stringify(ProductDes));
+
+    window.location.href = "groww_product_description.html";
+}
+
 
