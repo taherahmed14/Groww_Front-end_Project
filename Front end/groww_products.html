@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
     <link rel = "stylesheet" href="/styles/styles.css">
+    <style>
+        .filter_section{
+            border: 1px solid red;
+            width: 200px;
+            display:block;
+        }
+    </style>
     
 </head>
 <body>
@@ -26,8 +33,32 @@
     <div id="container">
         
         <!-- Add your contents here -->
+        <div class="filter_section">
+        <p>mutual funds</p>
+        <div class="box">
+            <input type="checkbox" value="Axis Small Cap" class="checkbox" id="axis">
+            <label for="axisMF">Axis Mutual Fund</label> 
+        </div>
+        <div class="box">
+          <input type="checkbox" value="iciciMF" class="checkbox" id="icici">
+          <label for="iciciMF">ICICI Prudential Technology</label> 
+      </div>
+      <div class="box">
+          <input type="checkbox" value="HDFC" class="checkbox" id="hdfc">
+          <label for="hdfcMF">HDFC</label> 
+      </div>
+      <div class="box">
+        <input type="checkbox" value="TATA Digital India" class="checkbox" id="tata">
+        <label for="tata">TATA Digital India</label> 
+    </div>
+ </div> 
+    
 
     </div>
+
+    
+    <div id="Mutual"> </div>
+
 
     <div id="footer">
         
@@ -37,3 +68,8 @@
     
 </body>
 </html>
+
+<script src="productapp.js">
+    
+
+</script>
