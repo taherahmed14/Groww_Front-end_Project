@@ -12,14 +12,17 @@
        <style>
            .filter_section{
               display:inline-block;
-               width:200px;
+               width:270px;
                height:200px;
-               border: 1px solid red;
+               border: 1px solid #ecedef;
+               border-radius: 3px;
+               box-shadow: 0 2px 3px 0 #0000001a;
+               
            }
 
            .right{
-               width:800px;
-               margin-left: 50px;
+               width:900px;
+               margin-left: 30px;
                margin-top: 60px;
               
                
@@ -27,6 +30,8 @@
 
            .container{
                display:flex;
+              
+               width : 96%;
                
            }
            .icon{
@@ -45,12 +50,46 @@
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
+              
              
+           }
+           .sub{
+               display:grid;
+               grid-template-columns: 200px 200px;
+               grid-gap:350px
+           }
+
+           .MFsub_text{
+               
+               width:200px;
+               margin-top: 3px;
+               font-size: .78rem;
+               line-height: 160%;
+               color: #7c7e8c;
+               letter-spacing: .2px;
+               margin-left: 60px;
+           }
+
+           .MFsub_text2{
+               
+               width:200px;
+               margin-top: 3px;
+               font-size: .78rem;
+               line-height: 160%;
+               color: #7c7e8c;
+               letter-spacing: .2px;
+              
            }
 
            .MFdiv{
-               border:1px solid blue;
+               border: 1px solid rgb(219, 214, 214);
                height:100px;
+               transition: 0.2s;
+               box-shadow: 0 2px 3px 0 #0000001a;
+           }
+           .MFdiv:hover{
+               transform: scale(1.01);
+
            }
 
            .returns{
@@ -76,8 +115,40 @@
                margin-left: 2px;
                
                width:300px;
+
            }
-          
+           .scroll{
+            overflow: auto;
+           }
+         
+           .head{
+               margin-left: 410px;
+               color:#44475b;
+               letter-spacing: .01em;
+               line-height: 160%;
+               font-size: 1.1rem;
+               font-weight: 600;
+               display:inline-block;
+           }
+           
+           .Sort{
+            margin-left: 485px;
+            font-size: 13px;
+            padding: 5px 10px;
+            color:#7c7e8c;
+            border: 1px solid rgb(219, 214, 214);
+            font-family: Arial, Helvetica, sans-serif;
+           }
+           .box{
+               font-size: 14px;
+               color: #44475b;
+               letter-spacing: .3px;
+           }
+
+           .cat{
+               height:150px;
+           }
+           
 
        </style>
        
@@ -95,13 +166,26 @@
            </div>
        </div>
 
+    <div class="Main_div">
+        <div>
+        <h1 class="head">All Mutual Funds</h2>
+
+            <select id="Sort" class="Sort" onchange="Sorting()">
+                <option > Sort by:</option>
+               <option value="Rat"> Rating- High To Low</option>
+               <option value="Ret"> Returns- High To Low</option>
+            </select>
+
+        </div>
+
+
     <div id="container" class="container">
         
         <!-- Add your contents here -->
         <div class="left">
 
-        <div class="filter_section">
-        <p>AMC</p>
+        <div class="filter_section scroll">
+        <p class="MFtext">AMC</p>
         <div class="box">
             <input type="checkbox" value="Axis" class="checkbox" id="axis">
             <label for="axisMF">Axis Mutual Fund</label> 
@@ -118,11 +202,38 @@
         <input type="checkbox" value="TATA" class="checkbox" id="tata">
         <label for="tata">TATA Digital India</label> 
     </div>
+    <div class="box">
+        <input type="checkbox" value="Paragh Parikh" class="checkbox" id="">
+        <label for="">Paragh Parikh</label> 
+    </div>
+   
+    <div class="box">
+        <input type="checkbox" value="UTI" class="checkbox" id="">
+        <label for="">UTI Flexi Cap</label> 
+    </div> 
+    <div class="box">
+        <input type="checkbox" value="Kotak" class="checkbox" id="">
+        <label for="">Kotak Bluechip Funds</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="Aditya Birla" class="checkbox" id="">
+        <label for="">Aditya Birla Sun Life</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="Nippon India Pharma" class="checkbox" id="">
+        <label for="">Nippon India Pharma</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="SBI" class="checkbox" id="">
+        <label for="">SBI Technology Oppurtunities Fund</label> 
+    </div>
+
+
  </div> 
 
 
- <div class="filter_section">
-    <p>Category</p>
+ <div class="filter_section cat">
+    <p class="MFtext ">Category</p>
     <div class="box">
         <input type="checkbox" value="Debt" class="checkbox" >
         <label for="">Debt</label> 
@@ -142,8 +253,8 @@
 </div> 
 
 
-<div class="filter_section">
-    <p>Risk</p>
+<div class="filter_section cat">
+    <p class="MFtext">Risk</p>
     <div class="box">
         <input type="checkbox" value="Low Risk" class="checkbox" >
         <label for="">Low</label> 
@@ -159,6 +270,27 @@
  
 </div> 
 
+<div class="filter_section">
+    <p class="MFtext">Fund Size</p>
+    <div class="box">
+        <input type="checkbox" value="" class="checkbox" >
+        <label for="">Upto 1,000cr</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="" class="checkbox" >
+      <label for="">Upto 2,000cr </label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="" class="checkbox" >
+      <label for="">Upto 5,000cr</label> 
+  </div>
+  <div class="box">
+    <input type="checkbox" value="" class="checkbox" >
+    <label for="">Upto 10,000cr</label> 
+</div>
+ 
+</div> 
+
 
 
 </div>
@@ -166,9 +298,13 @@
  
     
  <div class="right" id="right"></div>
+   
     
 
     </div>
+
+
+</div>
 
     
     

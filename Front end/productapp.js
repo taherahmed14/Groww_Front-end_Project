@@ -32,6 +32,7 @@ for( var checkbox of checkboxes){
            // console.log(data)
         }else{
             console.log("you unchecked" , this.value)
+           // No_amc(this.value)
         }
 
     })
@@ -48,6 +49,47 @@ function amc(x){
     
     viewMff(arr)
 }
+
+
+
+function Sorting(){
+    let temp = document.getElementById("Sort")
+     let name= temp.value;
+
+     if(name=="Rat")
+     sortHL();
+     else if(name=="Ret")
+     Ret_sortHL()
+         
+}
+
+
+  function sortHL() {
+    
+  let arr = data.sort(function(a,b){
+   
+   return b.rating - a.rating;
+
+  });
+
+  viewMf(arr)
+
+  }
+ 
+
+  function Ret_sortHL() {
+    
+  let arr = data.sort(function(a,b){
+   
+   return b.return_percentage - a.return_percentage;
+
+  });
+
+  viewMf(arr)
+
+  }
+
+
 
 
 
@@ -92,17 +134,37 @@ function viewMff( d){
     name.textContent= el.product_name;
     name.setAttribute("class" , "MFtext");
 
+    let intervalOne = document.createElement("div");
+    intervalOne.innerHTML = el.percentage_interval[0];
+    intervalOne.setAttribute("class" , "returns" )
 
-    let ch = document.createElement('div');
-    ch.innerHTML= el.percentage_interval[0];
-    ch.setAttribute("class" , "returns" )
+    let intervalTwo = document.createElement("div");
+    intervalTwo.innerHTML = el.percentage_interval[1];
+    intervalTwo.setAttribute("class" , "returns" )
+
+    let intervalThree = document.createElement("div");
+    intervalThree.innerHTML = el.percentage_interval[2];
+    intervalThree.setAttribute("class" , "returns" )
+
     
-    
-   
+    let subdiv = document.createElement('div')
+    subdiv.setAttribute("class" , "sub")
+
+    let risk = document.createElement('div')
+    risk.innerHTML= el.risk + "· " + el.category + "· " + el.rating + "★" ;
+    risk.setAttribute("class" , "MFsub_text")
+
+    let day = document.createElement('div');
+    day.innerHTML= "1D"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"1Y"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"3Y";
+    day.setAttribute("class" , "MFsub_text2")
+
+    subdiv.append(risk , day)
 
 
     
-      div.append( img , name , ch)
+      div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
+    
+     
 
       div.onclick = function () {
         referData(el)
@@ -116,9 +178,6 @@ function viewMff( d){
 
 
 }
-
-
-
 
 
 
@@ -142,11 +201,6 @@ function viewMf( d){
     img.src= el.product_image;
     img.setAttribute("class" , "icon")
     
-    
-
-    let amc = document.createElement('p');
-    amc.textContent = el.amc;
-   
 
 
     let name = document.createElement('p');
@@ -154,16 +208,34 @@ function viewMf( d){
     name.setAttribute("class" , "MFtext");
 
 
-    let ch = document.createElement('p');
-    ch.textContent= el.percentage_interval;
-    ch.setAttribute("class" , "returns" )
-    
-    
-   
+    let intervalOne = document.createElement("div");
+    intervalOne.innerHTML = el.percentage_interval[0];
+    intervalOne.setAttribute("class" , "returns" )
+
+    let intervalTwo = document.createElement("div");
+    intervalTwo.innerHTML = el.percentage_interval[1];
+    intervalTwo.setAttribute("class" , "returns" )
+
+    let intervalThree = document.createElement("div");
+    intervalThree.innerHTML = el.percentage_interval[2];
+    intervalThree.setAttribute("class" , "returns" )
+
+    let subdiv = document.createElement('div')
+    subdiv.setAttribute("class" , "sub")
+
+    let risk = document.createElement('div')
+    risk.innerHTML= el.risk + "· " + el.category + "· " + el.rating + "★" ;
+    risk.setAttribute("class" , "MFsub_text")
+
+    let day = document.createElement('div');
+    day.innerHTML= "1D"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"1Y"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"3Y";
+    day.setAttribute("class" , "MFsub_text2")
+
+    subdiv.append(risk , day)
 
 
     
-      div.append( img , name , ch)
+      div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
 
       div.onclick = function () {
         referData(el)
