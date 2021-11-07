@@ -68,7 +68,18 @@
             let productName = document.createElement("div");
             productName.innerHTML = product.product_name;
 
-            div.append(productImg, productName);
+            let intervalOne = document.createElement("div");
+            intervalOne.innerHTML = product.percentage_interval[0];
+
+            let intervalTwo = document.createElement("div");
+            intervalTwo.innerHTML = product.percentage_interval[1];
+
+            let intervalThree = document.createElement("div");
+            intervalThree.innerHTML = product.percentage_interval[2];
+
+            
+
+            div.append(productImg, productName, intervalOne, intervalTwo, intervalThree);
             prodContainer.append(div);
         });
     }
