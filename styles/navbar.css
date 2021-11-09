@@ -1,0 +1,73 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  /* max-width: 1110px; */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  color: #44475b !important;
+}
+
+.max-w {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav div {
+  display: flex;
+  /* margin-top: 20px; */
+}
+
+#logo {
+  width: 35%;
+}
+
+nav div .search {
+  margin-right: 100px;
+}
+
+#search {
+  height: 41px;
+  width: 440px;
+  padding-left: 45px;
+  padding-right: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#search:focus {
+  border-radius: 8px 8px 0px 0px;
+  border: none;
+  outline: none;
+}
+
+nav div i {
+  width: 40px;
+  margin-top: 10px;
+  position: absolute;
+  color: #44475b;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor:pointer;
+}
+
+#login-btn {
+  height: 43px;
+  padding: 10px;
+  width: 160px;
+  font-size: 15px;
+  font-weight: 550;
+  border: none;
+  border-radius: 4px;
+  background-color: #00d09c;
+  color: #fff;
+  cursor: pointer;
+}
