@@ -230,7 +230,31 @@
 
         </div>
 
-        <div id="rightContainer"></div>
+        <div id="rightContainer">
+            <div class="rupeeSymbol">₹</div>
+            <div id="calendarIcon">
+                <i class="material-icons">event</i>
+            </div>
+            <div class="optBtns">
+                <div id="monthlySip" class="whenClicked">MONTHLY SIP</div>
+                <div id="oneTime" class="whenNotClicked">ONE-TIME</div>
+            </div>
+            <div id="paymentOpt"> 
+                <div id="sipAmount">
+                    <div id="inputLabel">SIP Amount</div>
+                    <input type="number" id="sipAmountInput" placeholder="0" max="100000">
+                </div>
+                <div id="sipCal">
+                    <div id="dateLabel">Monthly SIP Date</div>
+                    <input type="date" id="sipCalInput" value="2021-11-15" data-date-format="YYYY MM DD" >
+                </div>
+                <div id="paymentNote">Next SIP Instalment on 15-12-2021</div>
+            </div>
+            <div class="addToCart">
+                <div id="addToCartBtn">ADD TO CART</div>
+                <div id="goToCartBtn">GO TO CART</div>
+            </div>
+        </div>
 
     </div>
 
@@ -242,3 +266,30 @@
     
 </body>
 </html>
+
+<script type="module">
+
+    import { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar } from "/scripts/product_desc_scripts.js";
+
+    let addToCartBtn = document.getElementById("addToCartBtn");
+    let goToCartBtn = document.getElementById("goToCartBtn");
+    let calendarSel = document.getElementById("sipCalInput");
+
+    addToCartBtn.onclick = function(){
+        addToCart();
+    }
+    goToCartBtn.onclick = function(){
+        goToCart();
+    }
+    monthlySip.onclick = function(){
+        showMonthlySip();
+    }
+    oneTime.onclick = function(){
+        showOneTime();
+    }
+    calendarSel.onchange = function(){
+        calendar();
+    }
+
+
+</script>
