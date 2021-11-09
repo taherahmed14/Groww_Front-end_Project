@@ -242,3 +242,40 @@
     
 </body>
 </html>
+
+<script>
+
+    let productArr = JSON.parse(localStorage.getItem("itemData"));
+
+    function getData(){
+        fetch("http://localhost:3000/api/products")
+        .then((res) => {
+            return res.json();
+        })
+        .then((res) => {
+            console.log("res: ", res);
+            console.log(productArr);
+            res.forEach(function({ id }){
+                if(id == productArr[0].id){
+                    console.log("Working", productArr[0].id);
+                }
+            });
+            
+            // appendProduct(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }
+
+    getData();
+
+    function showDescription(product){
+
+
+
+    }
+
+    
+
+</script>
