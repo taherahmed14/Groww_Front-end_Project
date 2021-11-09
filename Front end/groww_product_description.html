@@ -230,7 +230,16 @@
 
         </div>
 
-        <div id="rightContainer"></div>
+        <div id="rightContainer">
+            <div class="optBtns">
+                <div class="monthlySip">MONTHLY SIP</div>
+                <div class="oneTime">ONE-TIME</div>
+            </div>
+            <div id="paymentOpt"></div>
+            <div class="addToCart">
+                <div id="addToCartBtn">ADD TO CART</div>
+            </div>
+        </div>
 
     </div>
 
@@ -243,39 +252,15 @@
 </body>
 </html>
 
-<script>
+<script type="module">
 
-    let productArr = JSON.parse(localStorage.getItem("itemData"));
+    import { showDescription, addToCart } from "/scripts/product_desc_scripts.js";
 
-    function getData(){
-        fetch("http://localhost:3000/api/products")
-        .then((res) => {
-            return res.json();
-        })
-        .then((res) => {
-            console.log("res: ", res);
-            console.log(productArr);
-            res.forEach(function({ id }){
-                if(id == productArr[0].id){
-                    console.log("Working", productArr[0].id);
-                }
-            });
-            
-            // appendProduct(res);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+    let addToCartBtn = document.getElementById("addToCartBtn");
+
+    addToCartBtn.onclick = function(){
+        addToCart();
     }
 
-    getData();
-
-    function showDescription(product){
-
-
-
-    }
-
-    
 
 </script>
