@@ -22,14 +22,54 @@ var valuelist = document.getElementById('valueList')
 var text ='<span> selected are: </span>';
 var listArray = []
 
-var checkboxes = document.querySelectorAll('.checkbox');
+var amcData=[] ;
+var CategoryData=[] ;
+var RiskData=[];
 
-for( var checkbox of checkboxes){
+
+var checkboxes = document.querySelectorAll('.amctick');
+
+for( let checkbox of checkboxes){
 
     checkbox.addEventListener('click' , function(){
         if(this.checked == true){
             amc(this.value);
            // console.log(data)
+        }else{
+            console.log("you unchecked" , this.value)
+           // No_amc(this.value)
+           N_amc(this.value);
+        }
+
+    })
+}
+
+
+var c_boxes = document.querySelectorAll('.c_tick');
+
+for( let checkbox of c_boxes){
+
+    checkbox.addEventListener('click' , function(){
+        if(this.checked == true){
+            C_filter(this.value);
+            // console.log("Catadataaa" ,this.value)
+        }else{
+            console.log("you unchecked" , this.value)
+          
+           // No_amc(this.value)
+        }
+
+    })
+}
+
+var R_boxes = document.querySelectorAll('.R_tick');
+
+for( let checkbox of R_boxes){
+
+    checkbox.addEventListener('click' , function(){
+        if(this.checked == true){
+            R_filter(this.value);
+            // console.log("Catadataaa" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
            // No_amc(this.value)
@@ -39,14 +79,95 @@ for( var checkbox of checkboxes){
 }
 
 
+var F_boxes = document.querySelectorAll('.F_tick');
+
+for( let checkbox of F_boxes){
+
+    checkbox.addEventListener('click' , function(){
+        if(this.checked == true){
+            Fund_filter(Number(this.value));
+            // console.log("Catadataaa" ,this.value)
+        }else{
+            console.log("you unchecked" , this.value)
+            
+           // No_amc(this.value)
+        }
+
+    })
+}
+
+function Fund_filter(x){
+    let arr = RiskData.filter(function(a) {
+       // console.log("filte", x)                     //// Discuss to change the data of CR and Add more Data
+        var name = x;
+    return  a.fund_Category <= name ;
+
+    } );
+   // amcData = arr;
+   
+  // console.log("afteCfilte" , CategoryData)
+    viewMf(arr)
+}
+
+
+function R_filter(x){
+    let arr = CategoryData.filter(function(a) {
+                    
+        var name = x;
+    return  a.risk == name ;
+
+    } );
+   // amcData = arr;
+   RiskData.push(...arr)
+  
+    viewMf(arr)
+}
+
+
+
+
+
+function C_filter(x){
+    let arr = amcData.filter(function(a) {
+       // console.log("filte", x)                     /////////////
+        var name = x;
+    return  a.category == name ;
+
+    } );
+   // amcData = arr;
+   CategoryData.push(...arr);
+  // console.log("afteCfilte" , CategoryData)
+    viewMf(arr)
+}
+
+
+function N_amc(x){
+    let arr = amcData.filter(function(a) {
+       // console.log("filte", x)
+        var name = x;
+    return  a.amc != name ;
+
+    } );
+   // amcData = arr;
+    amcData=[];
+    amcData .push(...arr);
+  // console.log("arrdata" , amcData)
+    viewMf(arr)
+}
+
+
+
+
 function amc(x){
     let arr = data.filter(function(a) {
-       // console.log(x)
+       // console.log("filte", x)
         var name = x;
     return  a.amc == name ;
 
     } );
-    
+   // amcData = arr;
+    amcData .push(...arr);
+  // console.log("arrdata" , amcData)
     viewMff(arr)
 }
 

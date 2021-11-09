@@ -24,13 +24,14 @@
                width:900px;
                margin-left: 30px;
                margin-top: 60px;
+             
               
                
            }
 
            .container{
                display:flex;
-              
+                margin-top: 0px;
                width : 96%;
                
            }
@@ -56,7 +57,7 @@
            .sub{
                display:grid;
                grid-template-columns: 200px 200px;
-               grid-gap:350px
+               grid-gap:320px
            }
 
            .MFsub_text{
@@ -111,10 +112,12 @@
 
            .left{
                display:grid;
-               grid-template-columns: 200px;
+               grid-template-columns: 220px;
                margin-left: 2px;
-               
+               height:700px;
+
                width:300px;
+               padding-right:30px;
 
            }
            .scroll{
@@ -187,44 +190,44 @@
         <div class="filter_section scroll">
         <p class="MFtext">AMC</p>
         <div class="box">
-            <input type="checkbox" value="Axis" class="checkbox" id="axis">
+            <input type="checkbox" value="Axis" class="checkbox amctick" id="axis">
             <label for="axisMF">Axis Mutual Fund</label> 
         </div>
         <div class="box">
-          <input type="checkbox" value="ICICI" class="checkbox" id="icici">
+          <input type="checkbox" value="ICICI" class="checkbox amctick" id="icici">
           <label for="iciciMF">ICICI Prudential Technology</label> 
       </div>
       <div class="box">
-          <input type="checkbox" value="HDFC" class="checkbox" id="hdfc">
+          <input type="checkbox" value="HDFC" class="checkbox amctick" id="hdfc">
           <label for="hdfcMF">HDFC</label> 
       </div>
       <div class="box">
-        <input type="checkbox" value="TATA" class="checkbox" id="tata">
+        <input type="checkbox" value="TATA" class="checkbox amctick" id="tata">
         <label for="tata">TATA Digital India</label> 
     </div>
     <div class="box">
-        <input type="checkbox" value="Paragh Parikh" class="checkbox" id="">
+        <input type="checkbox" value="Paragh Parikh" class="checkbox amctick" id="">
         <label for="">Paragh Parikh</label> 
     </div>
    
     <div class="box">
-        <input type="checkbox" value="UTI" class="checkbox" id="">
+        <input type="checkbox" value="UTI" class="checkbox amctick" id="">
         <label for="">UTI Flexi Cap</label> 
     </div> 
     <div class="box">
-        <input type="checkbox" value="Kotak" class="checkbox" id="">
+        <input type="checkbox" value="Kotak" class="checkbox amctick" id="">
         <label for="">Kotak Bluechip Funds</label> 
     </div>
     <div class="box">
-        <input type="checkbox" value="Aditya Birla" class="checkbox" id="">
+        <input type="checkbox" value="Aditya Birla" class="checkbox amctick" id="">
         <label for="">Aditya Birla Sun Life</label> 
     </div>
     <div class="box">
-        <input type="checkbox" value="Nippon India Pharma" class="checkbox" id="">
+        <input type="checkbox" value="Nippon India Pharma" class="checkbox amctick" id="">
         <label for="">Nippon India Pharma</label> 
     </div>
     <div class="box">
-        <input type="checkbox" value="SBI" class="checkbox" id="">
+        <input type="checkbox" value="SBI" class="checkbox amctick" id="">
         <label for="">SBI Technology Oppurtunities Fund</label> 
     </div>
 
@@ -235,19 +238,19 @@
  <div class="filter_section cat">
     <p class="MFtext ">Category</p>
     <div class="box">
-        <input type="checkbox" value="Debt" class="checkbox" >
+        <input type="checkbox" value="Debt" class="checkbox c_tick" >
         <label for="">Debt</label> 
     </div>
     <div class="box">
-      <input type="checkbox" value="Equity" class="checkbox" >
+      <input type="checkbox" value="Equity" class="checkbox  c_tick" >
       <label for="">Equity</label> 
   </div>
   <div class="box">
-      <input type="checkbox" value="Hybrid" class="checkbox" >
+      <input type="checkbox" value="Hybrid" class="checkbox  c_tick" >
       <label for="">Hybrid</label> 
   </div>
   <div class="box">
-    <input type="checkbox" value="others" class="checkbox" >
+    <input type="checkbox" value="others" class="checkbox  c_tick" >
     <label for="">Others</label> 
 </div>
 </div> 
@@ -256,15 +259,15 @@
 <div class="filter_section cat">
     <p class="MFtext">Risk</p>
     <div class="box">
-        <input type="checkbox" value="Low Risk" class="checkbox" >
+        <input type="checkbox" value="Low Risk" class="checkbox R_tick" >
         <label for="">Low</label> 
     </div>
     <div class="box">
-      <input type="checkbox" value="Moderate Risk" class="checkbox" >
+      <input type="checkbox" value="Moderate Risk" class="checkbox R_tick" >
       <label for="">Moderate </label> 
   </div>
   <div class="box">
-      <input type="checkbox" value="High Risk" class="checkbox" >
+      <input type="checkbox" value="High Risk" class="checkbox R_tick" >
       <label for="">High</label> 
   </div>
  
@@ -273,19 +276,19 @@
 <div class="filter_section">
     <p class="MFtext">Fund Size</p>
     <div class="box">
-        <input type="checkbox" value="" class="checkbox" >
+        <input type="checkbox" value="2" class="checkbox F_tick" >
         <label for="">Upto 1,000cr</label> 
     </div>
     <div class="box">
-      <input type="checkbox" value="" class="checkbox" >
+      <input type="checkbox" value="4" class="checkbox F_tick" >
       <label for="">Upto 2,000cr </label> 
   </div>
   <div class="box">
-      <input type="checkbox" value="" class="checkbox" >
+      <input type="checkbox" value="10" class="checkbox F_tick" >
       <label for="">Upto 5,000cr</label> 
   </div>
   <div class="box">
-    <input type="checkbox" value="" class="checkbox" >
+    <input type="checkbox" value="20" class="checkbox F_tick" >
     <label for="">Upto 10,000cr</label> 
 </div>
  
