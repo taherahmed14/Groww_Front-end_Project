@@ -10,19 +10,29 @@
        <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
        <link rel = "stylesheet" href="/styles/styles.css">
        <style>
-           .filter_section{
+           .filter_section, .filter_section_one{
               display:inline-block;
                width:270px;
-               height:200px;
                border: 1px solid #ecedef;
                border-radius: 3px;
                box-shadow: 0 2px 3px 0 #0000001a;
+               padding-bottom: 10px;
                
+           }
+           .filter_section_one{
+               padding: 5px 0 15px 0;
+               display: flex;
+           }
+           #clearFilterBtn{
+               margin: 5% 0 0 45%;
+               font-size: 14px;
+               font-weight: 600;
+               cursor: pointer;
+               color: #00d09c;
            }
 
            .right{
-               width:900px;
-               margin-left: 30px;
+               width:800px;
                margin-top: 60px;
              
               
@@ -42,7 +52,7 @@
                
 
            }
-           .MFtext{
+           .MFtext, .filterHeading{
               font-size: 1rem;
               letter-spacing: 0.01em;
               color:#44475b;
@@ -51,13 +61,20 @@
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              
              
            }
+
+           .filterHeading{
+                margin-top: 15px;
+                padding-left: 10px;
+                
+           }
+
            .sub{
                display:grid;
                grid-template-columns: 200px 200px;
-               grid-gap:320px
+               grid-gap:320px;
+               
            }
 
            .MFsub_text{
@@ -79,6 +96,7 @@
                line-height: 160%;
                color: #7c7e8c;
                letter-spacing: .2px;
+               margin-left: 20%;
               
            }
 
@@ -87,6 +105,7 @@
                height:100px;
                transition: 0.2s;
                box-shadow: 0 2px 3px 0 #0000001a;
+               cursor: pointer;
            }
            .MFdiv:hover{
                transform: scale(1.01);
@@ -95,7 +114,7 @@
 
            .returns{
               
-               display:inline-block;
+               
                float:right;
                margin-top: 30px;
                margin-right: 35px;
@@ -104,7 +123,6 @@
               letter-spacing: 0.01em;
               color:#44475b;
               font-weight: 700;
-              display:inline-block;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
@@ -113,11 +131,9 @@
            .left{
                display:grid;
                grid-template-columns: 220px;
-               margin-left: 2px;
+               margin-left: 50px;
                height:700px;
-
                width:300px;
-               padding-right:30px;
 
            }
            .scroll{
@@ -125,7 +141,6 @@
            }
          
            .head{
-               margin-left: 410px;
                color:#44475b;
                letter-spacing: .01em;
                line-height: 160%;
@@ -135,9 +150,12 @@
            }
            
            .Sort{
-            margin-left: 485px;
+            margin-left: 435px;
+            margin-top: 1.5%;
+            width: 220px;
             font-size: 13px;
             padding: 5px 10px;
+            height: 80%;
             color:#7c7e8c;
             border: 1px solid rgb(219, 214, 214);
             font-family: Arial, Helvetica, sans-serif;
@@ -146,10 +164,17 @@
                font-size: 14px;
                color: #44475b;
                letter-spacing: .3px;
+               padding: 5px;
            }
 
            .cat{
                height:150px;
+           }
+           .productTileOne{
+               position: absolute;
+               display: flex;
+               margin: 5% 0 0 33%;
+               width: 60%;
            }
            
 
@@ -169,8 +194,8 @@
            </div>
        </div>
 
-    <div class="Main_div">
-        <div>
+    
+        <div class="productTileOne">
         <h1 class="head">All Mutual Funds</h2>
 
             <select id="Sort" class="Sort" onchange="Sorting()">
@@ -187,8 +212,13 @@
         <!-- Add your contents here -->
         <div class="left">
 
+            <div class="filter_section_one">
+                <div class="filterHeading">FILTERS</div>
+                <div id="clearFilterBtn">Clear All</div>
+            </div>
+
         <div class="filter_section scroll">
-        <p class="MFtext">AMC</p>
+        <div class="filterHeading">AMC</div>
         <div class="box">
             <input type="checkbox" value="Axis" class="checkbox amctick" id="axis">
             <label for="axisMF">Axis Mutual Fund</label> 
@@ -236,7 +266,7 @@
 
 
  <div class="filter_section cat">
-    <p class="MFtext ">Category</p>
+    <div class="filterHeading ">Category</div>
     <div class="box">
         <input type="checkbox" value="Debt" class="checkbox c_tick" >
         <label for="">Debt</label> 
@@ -256,8 +286,8 @@
 </div> 
 
 
-<div class="filter_section cat">
-    <p class="MFtext">Risk</p>
+<div class="filter_section">
+    <div class="filterHeading">Risk</div>
     <div class="box">
         <input type="checkbox" value="Low Risk" class="checkbox R_tick" >
         <label for="">Low</label> 
@@ -274,7 +304,7 @@
 </div> 
 
 <div class="filter_section">
-    <p class="MFtext">Fund Size</p>
+    <div class="filterHeading">Fund Size</div>
     <div class="box">
         <input type="checkbox" value="2" class="checkbox F_tick" >
         <label for="">Upto 1,000cr</label> 
@@ -301,13 +331,12 @@
  
     
  <div class="right" id="right"></div>
-   
-    
+
 
     </div>
 
 
-</div>
+
 
     
     
