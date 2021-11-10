@@ -207,4 +207,3 @@ function calculate(prin) {
 }
 
 export { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar };
-

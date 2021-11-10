@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groww - Product Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
     <link rel = "stylesheet" href="/styles/navbar.css">
@@ -26,7 +27,7 @@
 
     <nav class="max-w">
         <div style="margin-top:20px">
-            <a href="#"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
+            <a href="groww_home.html"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
             <div class="search">
                 <i class="material-icons">search</i><input type="search" id="search"
                     placeholder="What are you looking for today?" />
@@ -39,7 +40,20 @@
         
         <div id="leftContainer">
             <div id="titleDetails"></div>
-            <div id="graphDetails"></div>
+            <div id="graphDetails">
+                <div>
+                    <div class="graphDesc">
+                        <div id="percentageOne">42.96%</div>
+                        <div class="percentageDur">3Y annualised</div>
+                    </div>
+                    <div class="graphDescTwo">
+                        <div id="percentageTwo">+0.24%</div>
+                        <div class="percentageDur">1D</div>
+                    </div>
+                </div>
+                
+                <canvas id="myChart"></canvas>
+            </div>
             <div class="proDetails">
                 <div class="detListLeft">
                     <div class="points">
@@ -292,12 +306,6 @@
 
     </div>
 
-   <!--  <div id="footer">
-        
-         Add footer contents here 
-
-    </div> -->
-
      <!-- -- footer - (START)-- -->
 
    <div id="footer" style="margin-top:100px;">
@@ -442,6 +450,8 @@
 <script type="module">
 
     import { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar } from "/scripts/product_desc_scripts.js";
+    import { getData, appendingData, graph } from "/scripts/graph.js";
+    getData();
 
     let addToCartBtn = document.getElementById("addToCartBtn");
     let goToCartBtn = document.getElementById("goToCartBtn");
