@@ -1,5 +1,7 @@
 let productArr = JSON.parse(localStorage.getItem("itemData"));
 console.log(productArr);
+// console.log(productArr[0].id = 100);
+// console.log(productArr);
 let titleDet = document.getElementById("titleDetails");
 let navDet = document.getElementById("navValue");
 let ratingDet = document.getElementById("ratingValue");
@@ -55,17 +57,15 @@ function addToCart(){
     else{
         let flag = true;
         for(let i = 0; i < cartArr.length; i++){
-            let arr = cartArr[i];
-            for(let j = 0; j < arr.length; j++){
-                if(arr[j].id == productArr[0].id){
-                    console.log(productArr[0].id);
-                    flag = false;
-                } 
+            if(cartArr[i].id == productArr[0].id){
+                flag = false;
             }
         }
         if(flag){
-            cartArr.push(productArr);
+            productArr[0].price = sipInput.value;
+            cartArr.push(productArr[0]);
             localStorage.setItem("groww_cart", JSON.stringify(cartArr));
+            console.log(cartArr);
             alert("Product succesfully added to cart");
         }
         else{
