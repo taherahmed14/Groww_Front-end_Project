@@ -11,13 +11,13 @@ function calculate(prin, inte, time) {
     let i = inte.value;
     let t = time.value;
 
-    document.getElementById('prV').innerHTML = p;
-    document.getElementById('inV').innerHTML = i;
+    document.getElementById('prV').innerHTML = Number(p).toFixed(2);
+    document.getElementById('inV').innerHTML = Number(i).toFixed(2);
     document.getElementById('tiV').innerHTML = t;
     //console.log(p, i, t);
 
     //console.log((p * i * t) / 100);
 
-    document.getElementById('amount').innerHTML = (p * i * t) / 100;
+    document.getElementById('amount').innerHTML = ((p * i * t) / 100).toFixed(2);
 
 }
