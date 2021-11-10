@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliders</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>This is a demo input taking from range(slider)</h1>
+    <hr>
+
+    <div class="input-wrapper">
+        <input type="range" name="Principal" id="pr" value="100" min="1" max="200">
+        <label for="pr">Principal=<span id="prV">0</span></label>
+    </div>
+
+    <div class="input-wrapper">
+        <input type="range" name="Intrest Rate" id="in" value="10">
+        <label for="in">Intrest Rate=<span id="inV">0</span></label>
+    </div>
+
+    <div class="input-wrapper">
+        <input type="range" name="Time Period" id="ti" value="2">
+        <label for="ti">Time Period=<span id="tiV">0</span></label>
+    </div>
+
+
+    <p id="amount">#</p>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
