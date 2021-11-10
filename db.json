@@ -12,7 +12,8 @@
       "fund_Category": "4.5",
       "fund_size": "4532.50 Cr",
       "nav": "172.76",
-      "return_percentage": "36.76"
+      "return_percentage": "36.76",
+      "price": "0"
     },
     {
       "id": "002",
@@ -26,7 +27,8 @@
       "fund_Category": "8.2",
       "fund_size": "8232.50 Cr",
       "nav": "41.71",
-      "return_percentage": "36.44"
+      "return_percentage": "36.44",
+      "price": "0"
     },
     {
       "id": "003",
@@ -40,7 +42,8 @@
       "fund_Category": "1.2",
       "fund_size": "1249.30 Cr",
       "nav": "65.35",
-      "return_percentage": "26.05"
+      "return_percentage": "26.05",
+      "price": "0"
     },
     {
       "id": "004",
@@ -54,7 +57,8 @@
       "fund_Category": "0.8",
       "fund_size": "828.10 Cr",
       "nav": "53.79",
-      "return_percentage": "24.91"
+      "return_percentage": "24.91",
+      "price": "0"
     },
     {
       "id": "005",
@@ -68,7 +72,8 @@
       "fund_Category": "1.8",
       "fund_size": "1835.60 Cr",
       "nav": "281.65",
-      "return_percentage": "21.47"
+      "return_percentage": "21.47",
+      "price": "0"
     },
     {
       "id": "006",
@@ -82,7 +87,8 @@
       "fund_Category": "3.8",
       "fund_size": "3289.90 Cr",
       "nav": "424.52",
-      "return_percentage": "18.48"
+      "return_percentage": "18.48",
+      "price": "0"
     },
     {
       "id": "007",
@@ -96,7 +102,8 @@
       "fund_Category": "0.7",
       "fund_size": "782.10 Cr",
       "nav": "89.57",
-      "return_percentage": "2.17"
+      "return_percentage": "2.17",
+      "price": "0"
     },
     {
       "id": "008",
@@ -110,7 +117,8 @@
       "fund_Category": "6.7",
       "fund_size": "6719.30 Cr",
       "nav": "549.44",
-      "return_percentage": "17.16"
+      "return_percentage": "17.16",
+      "price": "0"
     },
     {
       "id": "009",
@@ -124,7 +132,8 @@
       "fund_Category": "5.8",
       "fund_size": "5816.80 Cr",
       "nav": "168.57",
-      "return_percentage": "32.96"
+      "return_percentage": "32.96",
+      "price": "0"
     },
     {
       "id": "010",
@@ -138,7 +147,8 @@
       "fund_Category": "3.6",
       "fund_size": "3610.60 Cr",
       "nav": "325.24",
-      "return_percentage": "9.61"
+      "return_percentage": "9.61",
+      "price": "0"
     },
     {
       "id": "011",
@@ -152,7 +162,8 @@
       "fund_Category": "7.5",
       "fund_size": "7581.50 Cr",
       "nav": "26.11",
-      "return_percentage": "2.57"
+      "return_percentage": "2.57",
+      "price": "0"
     },
     {
       "id": "012",
@@ -166,7 +177,8 @@
       "fund_Category": "3.6",
       "fund_size": "3681.50 Cr",
       "nav": "10.76",
-      "return_percentage": "26.98"
+      "return_percentage": "26.98",
+      "price": "0"
     },
     {
       "id": "013",
@@ -180,7 +192,8 @@
       "fund_Category": "5.8",
       "fund_size": "5189.30 Cr",
       "nav": "126.81",
-      "return_percentage": "32.11"
+      "return_percentage": "32.11",
+      "price": "0"
     },
     {
       "id": "014",
@@ -194,7 +207,8 @@
       "fund_Category": "3.1",
       "fund_size": "3100.80 Cr",
       "nav": "51.44",
-      "return_percentage": "19.29"
+      "return_percentage": "19.29",
+      "price": "0"
     },
     {
       "id": "015",
@@ -208,7 +222,8 @@
       "fund_Category": "4.6",
       "fund_size": "4619.70 Cr",
       "nav": "95.13",
-      "return_percentage": "28.15"
+      "return_percentage": "28.15",
+      "price": "0"
     }
   ]
 }
