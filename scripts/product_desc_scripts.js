@@ -51,7 +51,7 @@ let paymentNote = document.getElementById("paymentNote");
 
 function addToCart(){
     let cartArr = JSON.parse(localStorage.getItem("groww_cart")); 
-    if(sipInput.value == "" || sipInput.value < 100){
+    if(sipInput.value == "" || sipInput.value < 100 || sipInput.value > 50000){
         alert("Please enter minimum amount");
     }
     else{
@@ -124,6 +124,86 @@ function calendar(){
     year.push(newDate[0], newDate[1], newDate[2], newDate[3]);
     newDate = (`${date.join("")}-${month.join("")}-${year.join("")}`);
     paymentNote.innerHTML = "Next SIP Instalment on " + newDate;
+}
+
+//return calculation
+let rangeValue = document.getElementById("rangeValue");
+let totalInvest = document.getElementById("returnCalDetOne");
+let interestReturn = document.getElementById("returnCalDetTwo");
+let oneYear = document.getElementById('intervalOneYear');
+let threeYear = document.getElementById('intervalThreeYear');
+let fiveYear = document.getElementById('intervalFiveYear');
+let flagOneYear = true;
+let flagThreeYear = false;
+let flagFiveYear = false;
+
+oneYear.onclick = () => {
+    flagOneYear = true;
+    flagThreeYear = false;
+    flagFiveYear = false;
+    oneYear.setAttribute("class", "onclicked");
+    threeYear.setAttribute("class", "onNotclicked");
+    fiveYear.setAttribute("class", "onNotclicked");
+    totalInvest.innerHTML = `Total investment of ₹60000`;
+    interestReturn.innerHTML = "";
+}
+
+threeYear.onclick = () => {
+    flagThreeYear = true;
+    flagOneYear = false;
+    flagFiveYear = false;
+    oneYear.setAttribute("class", "onNotclicked");
+    threeYear.setAttribute("class", "onclicked");
+    fiveYear.setAttribute("class", "onNotclicked");
+    totalInvest.innerHTML = `Total investment of ₹180000`;
+    interestReturn.innerHTML = "";
+}
+
+fiveYear.onclick = () => {
+    flagThreeYear = false;
+    flagOneYear = false;
+    flagFiveYear = true;
+    oneYear.setAttribute("class", "onNotclicked");
+    threeYear.setAttribute("class", "onNotclicked");
+    fiveYear.setAttribute("class", "onclicked");
+    totalInvest.innerHTML = `Total investment of ₹300000`;
+    interestReturn.innerHTML = "";
+}
+
+
+let prin = document.getElementById('pr');
+let retrunPercent = productArr[0].return_percentage;
+retrunPercent = +retrunPercent;
+
+prin.addEventListener('input', () => calculate(prin));
+
+function calculate(prin) {
+    let p = prin.value;
+
+    if(flagOneYear){
+        let totalInvestment = p * 12;
+        let newReturn = (((retrunPercent/100) * totalInvestment) + totalInvestment).toFixed(2);
+
+        rangeValue.innerHTML = `₹${p} per month`;
+        totalInvest.innerHTML = `Total investment of ₹${totalInvestment}`;
+        interestReturn.innerHTML = `Would have become ₹${newReturn} (+${retrunPercent})`
+    }
+    else if(flagThreeYear){
+        let totalInvestment = p * 36;
+        let newReturn = (((retrunPercent/100) * totalInvestment) + totalInvestment).toFixed(2);
+
+        rangeValue.innerHTML = `₹${p} per month`;
+        totalInvest.innerHTML = `Total investment of ₹${totalInvestment}`;
+        interestReturn.innerHTML = `Would have become ₹${newReturn} (+${retrunPercent})`
+    } 
+    else if(flagFiveYear){
+        let totalInvestment = p * 60;
+        let newReturn = (((retrunPercent/100) * totalInvestment) + totalInvestment).toFixed(2);
+
+        rangeValue.innerHTML = `₹${p} per month`;
+        totalInvest.innerHTML = `Total investment of ₹${totalInvestment}`;
+        interestReturn.innerHTML = `Would have become ₹${newReturn} (+${retrunPercent})`
+    } 
 }
 
 export { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar };
