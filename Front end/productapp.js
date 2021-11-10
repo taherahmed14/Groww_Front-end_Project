@@ -27,6 +27,8 @@ var CategoryData=[] ;
 var RiskData=[];
 
 
+
+
 var checkboxes = document.querySelectorAll('.amctick');
 
 for( let checkbox of checkboxes){
@@ -95,6 +97,12 @@ for( let checkbox of F_boxes){
 
     })
 }
+
+function clear_Tick(){
+    
+    location.reload();
+}
+
 
 function Fund_filter(x){
     let arr = RiskData.filter(function(a) {
