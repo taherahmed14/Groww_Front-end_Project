@@ -34,7 +34,7 @@ nav div .search {
 #search {
   height: 41px;
   width: 440px;
-  padding-left: 45px;
+  padding-left: 38px;
   padding-right: 10px;
   font-size: 15px;
   border-radius: 8px;
@@ -54,7 +54,7 @@ nav div i {
   position: absolute;
   color: #44475b;
   font-size: 18px;
-  margin-left: 8px;
+  margin-left: 10px;
   cursor:pointer;
 }
 
