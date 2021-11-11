@@ -148,7 +148,7 @@
                             width="40" height="40" alt="Groww"></div>
                     <div class="tab-text2">Stocks</div>
                 </div>
-                <div class="indicator"></div>
+                <!-- <div class="indicator"></div> -->
             </div>
             <div class="tab-text1">
                 <div class="tab-wrapper color-hover" onclick="show1()">
@@ -463,14 +463,14 @@
 
                         <div>
                             <a href="https://itunes.apple.com/us/app/groww-mutual-funds-app/id1404871703?ls=1&amp;mt=8">
-                                <img class="iosImg"
+                                <img class="iosImg hover-img"
                                     src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/ios.0a99dcbb.png"
                                     width="255" height="356" alt="ios">
                             </a>
                         </div>
                         <div style="margin-top:30px">
                             <a href="https://play.google.com/store/apps/details?id=com.nextbillion.groww">
-                                <img class="andImg"
+                                <img class="andImg hover-img"
                                     src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/android.6dfb12ca.png"
                                     width="255" height="357" alt="android">
                             </a>
@@ -481,7 +481,7 @@
                     <!-- -- 2nd part - 1 img - in center -- -->
                     <div style="margin-left:30px;">
                         <a href="groww_home.html">
-                            <img class="webImg"
+                            <img class="webImg hover-img"
                                 src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/web.634ac717.png"
                                 width="255" height="357" alt="web">
                         </a>
@@ -658,6 +658,25 @@
 
     <!-- -- footer - (END)-- -->
 
+
+
+    <!-- -- image hover animation -- JS - Part -- -->
+    
+    <!-- ------   == (web) VanillaTilt JS ==  ------ -->
+
+    <script type="text/javascript" src="/scripts/Vanilla-tilt.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".hover-img"), {
+            max: 25,
+            speed: 300,
+            // gyroscope:true,
+            // perspective:1000,
+        });
+
+        //It also supports NodeList
+        // VanillaTilt.init(document.querySelectorAll(".hover-img"));
+    </script>
 
 </body>
 
