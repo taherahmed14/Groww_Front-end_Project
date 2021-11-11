@@ -28,13 +28,13 @@ nav div {
 }
 
 nav div .search {
-  margin-right: 100px;
+  margin-right: 120px;
 }
 
 #search {
   height: 41px;
   width: 440px;
-  padding-left: 38px;
+  padding-left: 45px;
   padding-right: 10px;
   font-size: 15px;
   border-radius: 8px;
@@ -50,11 +50,11 @@ nav div .search {
 
 nav div i {
   width: 40px;
-  margin-top: 10px;
+  margin-top: 12px;
   position: absolute;
   color: #44475b;
-  font-size: 18px;
-  margin-left: 10px;
+  font-size: 20px !important;
+  margin-left: 14px;
   cursor:pointer;
 }
 

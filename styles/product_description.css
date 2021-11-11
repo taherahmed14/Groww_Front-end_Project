@@ -24,7 +24,38 @@
 #graphDetails{
     width: 100%;
     height: 500px;
-    border: 1px solid rgb(219, 214, 214);
+}
+#graphDetails > div{
+    width: 100%;
+    height: 10%;
+}
+.graphDesc, .graphDescTwo{
+    margin: 2% 0 0.5% 6%;
+    width: 50%;
+    display: flex;
+}
+#percentageOne{
+    font-size: 26px;
+    font-weight: 550;
+    color: #44475b;
+}
+.percentageDur{
+    margin: 2% 0 0% 2%;
+    font-size: 14px;
+    color: gray;
+}
+#percentageTwo{
+    margin-top: 2%;
+    font-size: 14px;
+    font-weight: 550;
+    color: #00d09c;
+}
+.graphDescTwo{
+    margin-top: 0;
+}
+#myChart{
+    margin: 2% 0 0 5%;
+    max-width: 90%;
 }
 .proDetails, .minAmountDetails{
     width: 100%;

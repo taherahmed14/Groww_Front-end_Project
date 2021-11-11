@@ -64,9 +64,7 @@
     background-color: #242633;
 } */
 
-
 /* <!-- ================== new code =============== --> */
-
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,900&display=swap");
 
@@ -100,13 +98,13 @@ nav div {
 }
 
 nav div .search {
-  margin-right: 100px;
+  margin-right: 120px;
 }
 
 #search {
   height: 41px;
   width: 440px;
-  padding-left: 38px;
+  padding-left: 45px;
   padding-right: 10px;
   font-size: 15px;
   border-radius: 8px;
@@ -122,12 +120,12 @@ nav div .search {
 
 nav div i {
   width: 40px;
-  margin-top: 10px;
+  margin-top: 12px;
   position: absolute;
   color: #44475b;
-  font-size: 18px;
-  margin-left: 10px;
-  cursor:pointer;
+  font-size: 20px !important;
+  margin-left: 14px;
+  cursor: pointer;
 }
 
 #login-btn {
@@ -436,15 +434,19 @@ nav div i {
   left: 0px;
   overflow: hidden;
   margin-top: 200px;
+
+  background-image: url("//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/shield-groww.0d0cc15e.png");
+  background-position: center;
+  /* background-size: contain !important; */
+  background-repeat: no-repeat !important; 
+  background-position-x: 30px !important;
 }
 
-#animation-div img {
-  /* height: 400%; */
-  /* display: block; */
+/* #animation-div img {
   margin-top: -242px;
   margin-left: -90px;
   overflow: hidden;
-}
+} */
 
 .hs33TextWrapper {
   color: #fff;
@@ -656,8 +658,6 @@ a {
 
 /* --- app link --- */
 
-
-
 /* <!-- -- get in touch -- --> */
 
 .ss34Wrapper {
@@ -666,20 +666,20 @@ a {
   height: 368px;
   border-radius: 16px;
   background: #00d09c;
-  box-shadow: 0 12px 10px -1px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 10px -1px rgba(0, 0, 0, 0.1);
 }
 
 #support .heading {
   font-size: 36px;
   color: #fff;
   line-height: 25px;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   font-weight: 500;
 }
 
-#support  .para {
+#support .para {
   color: #fff;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
   font-size: 16px;
   line-height: 32px;
   font-weight: 400;
@@ -739,15 +739,15 @@ ul {
   list-style-type: none;
 }
 
-.footer-1 li{
-    padding: 0 10px;
-    line-height: 23px;
-    color: #fff;
+.footer-1 li {
+  padding: 0 10px;
+  line-height: 23px;
+  color: #fff;
 }
 
-#fot-section-2 li{
-    padding: 0 10px 10px;
-    color: #fff;
+#fot-section-2 li {
+  padding: 0 10px 10px;
+  color: #fff;
 }
 
 li {
@@ -755,30 +755,30 @@ li {
 }
 
 .footer-1 li {
-  cursor:default;
+  cursor: default;
 }
 
-.fot-top-heading{
+.fot-top-heading {
   font-size: 18px;
   padding: 10px;
   letter-spacing: 1px;
   line-height: 21px;
   margin-bottom: 15px;
-  margin-top:17px;
+  margin-top: 17px;
   color: #fff;
-  cursor:default;
+  cursor: default;
 }
- 
+
 /* underline */
 
 .footerLine {
   height: 1px;
-  opacity: .1;
+  opacity: 0.1;
   border-bottom: 1px solid #fff;
   margin-top: 30px;
 }
 
-.copyRight{
+.copyRight {
   margin-top: 10px;
 }
 
@@ -787,6 +787,5 @@ li {
   color: #eb5b3c;
   margin: 0 4px;
 }
-
 
 /* <!-- -- footer - (END)-- --> */
