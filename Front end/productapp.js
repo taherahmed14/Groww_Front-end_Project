@@ -57,6 +57,7 @@ for( let checkbox of c_boxes){
             // console.log("Catadataaa" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
+             N_C_filter(this.value)
           
            // No_amc(this.value)
         }
@@ -74,6 +75,7 @@ for( let checkbox of R_boxes){
             // console.log("Catadataaa" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
+            N_R_filter(this.value)
            // No_amc(this.value)
         }
 
@@ -114,8 +116,84 @@ function Fund_filter(x){
    // amcData = arr;
    
   // console.log("afteCfilte" , CategoryData)
-    viewMf(arr)
+  view_after_Fund(arr)
 }
+
+let fund_cont=0;
+
+
+function view_after_Fund( d){
+    
+    if(fund_cont==0)
+    {
+        parent.innerHTML = null;
+        fund_cont++;
+
+    }
+   
+    d.forEach( function ( el)
+    {
+       // console.log("im in" , el)
+    let div = document.createElement('div');
+    div.setAttribute("class" , "MFdiv")
+
+    let img = document.createElement('img');
+    img.src= el.product_image;
+    img.setAttribute("class" , "icon")
+
+    let amc = document.createElement('p');
+    amc.textContent = el.amc;
+   
+
+    let name = document.createElement('p');
+    name.textContent= el.product_name;
+    name.setAttribute("class" , "MFtext");
+
+    let intervalOne = document.createElement("div");
+    intervalOne.innerHTML = el.percentage_interval[0];
+    intervalOne.setAttribute("class" , "returns" )
+
+    let intervalTwo = document.createElement("div");
+    intervalTwo.innerHTML = el.percentage_interval[1];
+    intervalTwo.setAttribute("class" , "returns" )
+
+    let intervalThree = document.createElement("div");
+    intervalThree.innerHTML = el.percentage_interval[2];
+    intervalThree.setAttribute("class" , "returns" )
+
+    
+    let subdiv = document.createElement('div')
+    subdiv.setAttribute("class" , "sub")
+
+    let risk = document.createElement('div')
+    risk.innerHTML= el.risk + "· " + el.category + "· " + el.rating + "★" ;
+    risk.setAttribute("class" , "MFsub_text")
+
+    let day = document.createElement('div');
+    day.innerHTML= "1D"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"1Y"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"3Y";
+    day.setAttribute("class" , "MFsub_text2")
+
+    subdiv.append(risk , day)
+
+
+    
+      div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
+    
+     
+
+      div.onclick = function () {
+        referData(el)
+    }
+    
+      parent.append(div);
+    
+    
+    
+     } );
+
+
+}
+
 
 
 function R_filter(x){
@@ -128,7 +206,100 @@ function R_filter(x){
    // amcData = arr;
    RiskData.push(...arr)
   
-    viewMf(arr)
+   view_after_Risk(arr)
+}
+
+function N_R_filter(x){
+    let arr = RiskData.filter(function(a) {
+                    
+        var name = x;
+    return  a.risk != name ;
+
+    } );
+   // amcData = arr;
+   RiskData.push(...arr)
+  
+   viewMf(arr)
+}
+
+
+let risk_cont=0;
+
+
+function view_after_Risk( d){
+    
+    if(risk_cont==0)
+    {
+        parent.innerHTML = null;
+        risk_cont++;
+
+    }
+    
+   
+   
+    d.forEach( function ( el)
+    {
+       // console.log("im in" , el)
+    let div = document.createElement('div');
+    div.setAttribute("class" , "MFdiv")
+
+  
+    let img = document.createElement('img');
+    img.src= el.product_image;
+    img.setAttribute("class" , "icon")
+    
+
+    let amc = document.createElement('p');
+    amc.textContent = el.amc;
+   
+
+    let name = document.createElement('p');
+    name.textContent= el.product_name;
+    name.setAttribute("class" , "MFtext");
+
+    let intervalOne = document.createElement("div");
+    intervalOne.innerHTML = el.percentage_interval[0];
+    intervalOne.setAttribute("class" , "returns" )
+
+    let intervalTwo = document.createElement("div");
+    intervalTwo.innerHTML = el.percentage_interval[1];
+    intervalTwo.setAttribute("class" , "returns" )
+
+    let intervalThree = document.createElement("div");
+    intervalThree.innerHTML = el.percentage_interval[2];
+    intervalThree.setAttribute("class" , "returns" )
+
+    
+    let subdiv = document.createElement('div')
+    subdiv.setAttribute("class" , "sub")
+
+    let risk = document.createElement('div')
+    risk.innerHTML= el.risk + "· " + el.category + "· " + el.rating + "★" ;
+    risk.setAttribute("class" , "MFsub_text")
+
+    let day = document.createElement('div');
+    day.innerHTML= "1D"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"1Y"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"3Y";
+    day.setAttribute("class" , "MFsub_text2")
+
+    subdiv.append(risk , day)
+
+
+    
+      div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
+    
+     
+
+      div.onclick = function () {
+        referData(el)
+    }
+    
+      parent.append(div);
+    
+    
+    
+     } );
+
+
 }
 
 
@@ -137,7 +308,7 @@ function R_filter(x){
 
 function C_filter(x){
     let arr = amcData.filter(function(a) {
-       // console.log("filte", x)                     /////////////
+                       
         var name = x;
     return  a.category == name ;
 
@@ -145,8 +316,102 @@ function C_filter(x){
    // amcData = arr;
    CategoryData.push(...arr);
   // console.log("afteCfilte" , CategoryData)
-    viewMf(arr)
+  view_after_Catagory(arr)                                   
 }
+
+
+
+function  N_C_filter(x){
+    let arr = CategoryData.filter(function(a) {
+       
+        var name = x;
+    return  a.category != name ;
+
+    } );
+   // amcData = arr;
+   CategoryData.push(...arr);
+  // console.log("afteCfilte" , CategoryData)
+  viewMf(arr)                                
+}
+
+
+
+let catagory_cont=0;
+
+function view_after_Catagory( d){
+    
+    if(catagory_cont==0)
+    {
+        parent.innerHTML = null;
+        catagory_cont++;
+
+    }
+   
+   
+    d.forEach( function ( el)
+    {
+       // console.log("im in" , el)
+    let div = document.createElement('div');
+    div.setAttribute("class" , "MFdiv")
+
+  
+    let img = document.createElement('img');
+    img.src= el.product_image;
+    img.setAttribute("class" , "icon")
+    
+    let amc = document.createElement('p');
+    amc.textContent = el.amc;
+   
+    let name = document.createElement('p');
+    name.textContent= el.product_name;
+    name.setAttribute("class" , "MFtext");
+
+    let intervalOne = document.createElement("div");
+    intervalOne.innerHTML = el.percentage_interval[0];
+    intervalOne.setAttribute("class" , "returns" )
+
+    let intervalTwo = document.createElement("div");
+    intervalTwo.innerHTML = el.percentage_interval[1];
+    intervalTwo.setAttribute("class" , "returns" )
+
+    let intervalThree = document.createElement("div");
+    intervalThree.innerHTML = el.percentage_interval[2];
+    intervalThree.setAttribute("class" , "returns" )
+
+    
+    let subdiv = document.createElement('div')
+    subdiv.setAttribute("class" , "sub")
+
+    let risk = document.createElement('div')
+    risk.innerHTML= el.risk + "· " + el.category + "· " + el.rating + "★" ;
+    risk.setAttribute("class" , "MFsub_text")
+
+    let day = document.createElement('div');
+    day.innerHTML= "1D"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"1Y"+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+"3Y";
+    day.setAttribute("class" , "MFsub_text2")
+
+    subdiv.append(risk , day)
+
+
+    
+      div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
+    
+     
+
+      div.onclick = function () {
+        referData(el)
+    }
+    
+      parent.append(div);
+    
+    
+    
+     } );
+
+
+}
+
+
 
 
 function N_amc(x){
@@ -162,7 +427,6 @@ function N_amc(x){
   // console.log("arrdata" , amcData)
     viewMf(arr)
 }
-
 
 
 
@@ -289,25 +553,20 @@ function viewMff( d){
 
     subdiv.append(risk , day)
 
-
-    
       div.append( img , name , intervalOne, intervalTwo, intervalThree , subdiv)
     
      
-
       div.onclick = function () {
         referData(el)
     }
     
       parent.append(div);
-    
-    
+     
     
      } );
 
 
 }
-
 
 
    
