@@ -14,12 +14,12 @@ function showData(){
             let temp = "";
             for(let i = 0; i < data.product_name.length; i++){
                 temp += data.product_name[i];
-                if(inputValue == temp){
+                let tempLower = temp.toLowerCase();
+                if(inputValue == temp || inputValue == tempLower){
                     console.log(data.product_name);
                     productArr.push(data);
                 }
             }
-            console.log(productArr);
             dropDown(productArr);
         });
 
@@ -31,14 +31,30 @@ function showData(){
 
 function dropDown(product){
     dropdownBox.innerHTML = null;
+    dropdownBox.setAttribute("class", "dropDown");
     product.forEach((el) => {
         let div = document.createElement("div");
+        div.setAttribute("class", "dropDownDiv");
         let prodName = document.createElement("div");
         prodName.innerHTML = el.product_name;
+        prodName.setAttribute("class", "dropDownName");
+
+        div.onclick = () => {
+            goToProduct(el);
+        }
 
         div.append(prodName);
         dropdownBox.append(div);
     });
+}
+
+let productArr = JSON.parse(localStorage.getItem("itemData"));
+
+function goToProduct(el){
+    productArr[0] = el;
+    localStorage.setItem("itemData", JSON.stringify(productArr));
+    console.log(productArr);
+    window.location.href = "groww_product_description.html";
 }
 
 function deBounce(func, delay){

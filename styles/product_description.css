@@ -441,11 +441,3 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
 
 }
-
-#dropDown{
-    width: 410px;
-    margin-left: 40%;
-    position: absolute;
-    border: 1px solid red;
-    /* display: none; */
-}
