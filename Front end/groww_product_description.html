@@ -36,6 +36,8 @@
         </div>
     </nav>
 
+    <div id="dropDown"></div>
+
     <div id="container">
         
         <div id="leftContainer">
@@ -455,7 +457,8 @@
 
     import { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar } from "/scripts/product_desc_scripts.js";
     import { getData, appendingData, graph } from "/scripts/graph.js";
-    getData();
+    import {showData, deBounce } from "/scripts/search_box.js";
+    // getData();
 
     let addToCartBtn = document.getElementById("addToCartBtn");
     let goToCartBtn = document.getElementById("goToCartBtn");
@@ -476,6 +479,12 @@
     calendarSel.onchange = function(){
         calendar();
     }
+
+    let searchInput = document.getElementById("search");
+
+    searchInput.oninput = () => {
+        deBounce(showData, 1000);
+    };
 
 
 </script>
