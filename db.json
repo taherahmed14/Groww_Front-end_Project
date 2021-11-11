@@ -13,7 +13,8 @@
       "fund_size": "4532.50 Cr",
       "nav": "172.76",
       "return_percentage": "36.76",
-      "price": "0"
+      "price": "0",
+      "symbol": "000002.SHZ"
     },
     {
       "id": "002",
@@ -28,7 +29,8 @@
       "fund_size": "8232.50 Cr",
       "nav": "41.71",
       "return_percentage": "36.44",
-      "price": "0"
+      "price": "0",
+      "symbol": "IBM"
     },
     {
       "id": "003",
@@ -43,7 +45,8 @@
       "fund_size": "1249.30 Cr",
       "nav": "65.35",
       "return_percentage": "26.05",
-      "price": "0"
+      "price": "0",
+      "symbol": "TSCO.LON"
     },
     {
       "id": "004",
@@ -58,7 +61,8 @@
       "fund_size": "828.10 Cr",
       "nav": "53.79",
       "return_percentage": "24.91",
-      "price": "0"
+      "price": "0",
+      "symbol": "SHOP.TRT"
     },
     {
       "id": "005",
@@ -73,7 +77,8 @@
       "fund_size": "1835.60 Cr",
       "nav": "281.65",
       "return_percentage": "21.47",
-      "price": "0"
+      "price": "0",
+      "symbol": "GPV.TRV"
     },
     {
       "id": "006",
@@ -88,7 +93,8 @@
       "fund_size": "3289.90 Cr",
       "nav": "424.52",
       "return_percentage": "18.48",
-      "price": "0"
+      "price": "0",
+      "symbol": "DAI.DEX"
     },
     {
       "id": "007",
@@ -103,7 +109,8 @@
       "fund_size": "782.10 Cr",
       "nav": "89.57",
       "return_percentage": "2.17",
-      "price": "0"
+      "price": "0",
+      "symbol": "RELIANCE.BSE"
     },
     {
       "id": "008",
@@ -118,7 +125,8 @@
       "fund_size": "6719.30 Cr",
       "nav": "549.44",
       "return_percentage": "17.16",
-      "price": "0"
+      "price": "0",
+      "symbol": "600104.SHH"
     },
     {
       "id": "009",
@@ -133,7 +141,8 @@
       "fund_size": "5816.80 Cr",
       "nav": "168.57",
       "return_percentage": "32.96",
-      "price": "0"
+      "price": "0",
+      "symbol": "000002.SHZ"
     },
     {
       "id": "010",
@@ -148,7 +157,8 @@
       "fund_size": "3610.60 Cr",
       "nav": "325.24",
       "return_percentage": "9.61",
-      "price": "0"
+      "price": "0",
+      "symbol": "IBM"
     },
     {
       "id": "011",
@@ -163,7 +173,8 @@
       "fund_size": "7581.50 Cr",
       "nav": "26.11",
       "return_percentage": "2.57",
-      "price": "0"
+      "price": "0",
+      "symbol": "TSCO.LON"
     },
     {
       "id": "012",
@@ -178,7 +189,8 @@
       "fund_size": "3681.50 Cr",
       "nav": "10.76",
       "return_percentage": "26.98",
-      "price": "0"
+      "price": "0",
+      "symbol": "SHOP.TRT"
     },
     {
       "id": "013",
@@ -193,7 +205,8 @@
       "fund_size": "5189.30 Cr",
       "nav": "126.81",
       "return_percentage": "32.11",
-      "price": "0"
+      "price": "0",
+      "symbol": "GPV.TRV"
     },
     {
       "id": "014",
@@ -208,7 +221,8 @@
       "fund_size": "3100.80 Cr",
       "nav": "51.44",
       "return_percentage": "19.29",
-      "price": "0"
+      "price": "0",
+      "symbol": "DAI.DEX"
     },
     {
       "id": "015",
@@ -223,7 +237,8 @@
       "fund_size": "4619.70 Cr",
       "nav": "95.13",
       "return_percentage": "28.15",
-      "price": "0"
+      "price": "0",
+      "symbol": "RELIANCE.BSE"
     }
   ]
 }
