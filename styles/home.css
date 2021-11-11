@@ -346,6 +346,10 @@ nav div i {
   filter: grayscale(0%);
 }
 
+.color-hover:hover{
+  border-bottom: 3px solid #00d09c;
+}
+
 .tab-text1 {
   padding-right: 87px;
   height: 65px;
