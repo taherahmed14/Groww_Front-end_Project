@@ -9,6 +9,7 @@
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
        <link rel = "stylesheet" href="/styles/navbar.css">
+       <link rel="stylesheet" href="/styles/search_box.css">
        
        <style>
            #container{
@@ -205,8 +206,8 @@
            }
 
            .right{
-               margin-left:0px;
-               width:95%;
+               margin-left:-19px;
+               width:99%;
                margin-top: 35px;
                
                
@@ -238,9 +239,6 @@
 
            .MFsub_text{
                
-             
-
-               border:1px solid blue;
                width:65%;
                margin-top: 3px;
                font-size: .62rem;
@@ -248,6 +246,7 @@
                color: #7c7e8c;
                letter-spacing: .2px;
                margin-left: 20%;
+               word-break: break-word;
            }
 
            .MFsub_text2{
@@ -265,7 +264,7 @@
 
 
            .MFtext{
-            border:1px solid black;
+            
              margin-left: 2px;
               width:70%;
               font-size: 0.9rem;
@@ -282,18 +281,15 @@
 
 
 
-
-
-
            .productTileOne{
                
                position: absolute;
-               margin-left:0;
+               margin-left:2px;
                padding:0;
                font-size: small;
                margin-top:3%;
-               width: 200px;
-               border: 1px solid brown;
+               width: 75%;
+               
                height:30px;
                
            }
@@ -302,28 +298,17 @@
                color:#44475b;
                letter-spacing: .01em;
                width:90%;
-               font-size: 0.9rem;
-               font-weight: 600;
+               font-size: 1rem;
+               font-weight: 700;
                display:inline-block;
            }
 
-         
 
           .Sort{
                
-               margin-left: 0px;
-               margin-top: 1.5%;
-               width: 30px;
-               font-size: 5px;
-               padding:0;
-               height: 26px;
-               color:#7c7e8c;
-               border: 1px solid rgb(219, 214, 214);
-               font-family: Arial, Helvetica, sans-serif;
+              display:none;
               }
               
-
-
 
             }
 
@@ -344,18 +329,25 @@
            </div>
        </div> -->
 
-       <nav class="max-w">
-        
+    <nav class="max-w">
+        <div class="nav-div">
+            <div><a href="groww_home.html"><img class=""
+                        src="https://bit.ly/3nMw3oc"
+                        width="148" height="40" alt="Groww Logo" itemprop="logo"></a>
+            </div>
 
-        <div style="margin-top:20px"">
-            <a href="groww_home.html"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
-            <div class="search">
+            <div class="c-search">
                 <i class="material-icons">search</i><input type="search" id="search"
                     placeholder="What are you looking for today?" />
             </div>
-            <a href="#"><button id="login-btn">Login/Register</button></a></li>
+
+            <div>
+                <a href="#"><button id="login-btn">Login/Register</button></a></li>
+            </div>
         </div>
     </nav>
+
+    <div id="dropDown" class="noDropDownDisplay"></div>
 
     
         <div class="productTileOne">
@@ -644,7 +636,6 @@
 </html>
 
 <script src="productapp.js">
-   
-    
-
 </script>
+
+<script src="/scripts/search_box.js"></script>

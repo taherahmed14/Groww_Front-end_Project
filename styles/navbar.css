@@ -18,17 +18,16 @@ body {
   
 }
 
-nav div {
+/* ----------- */
+
+.nav-div {
   display: flex;
-  /* margin-top: 20px; */
+  margin-top: 20px;
+  justify-content: space-between;
 }
 
-#logo {
-  width: 35%;
-}
-
-nav div .search {
-  margin-right: 120px;
+nav div .c-search {
+  margin-left: 120px;
 }
 
 #search {
@@ -55,7 +54,7 @@ nav div i {
   color: #44475b;
   font-size: 20px !important;
   margin-left: 14px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #login-btn {
@@ -71,14 +70,13 @@ nav div i {
   cursor: pointer;
 }
 
-/* ----- */
+/* ----------- */
 
 .container {
   display: flex;
   margin-top: 100px;
   position: relative;
 }
-
 
 a {
   text-decoration: none;
