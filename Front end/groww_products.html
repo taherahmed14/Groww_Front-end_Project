@@ -9,6 +9,7 @@
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <link rel = "icon" href = "https://groww.in/logo-groww270.png" type = "image/x-icon"> 
        <link rel = "stylesheet" href="/styles/navbar.css">
+       
        <style>
            #container{
                 width: 80%;
@@ -40,7 +41,6 @@
                width:800px;
                margin-top: 60px;
              
-              
                
            }
 
@@ -155,6 +155,7 @@
            }
            
            .Sort{
+               
             margin-left: 435px;
             margin-top: 1.5%;
             width: 220px;
@@ -165,6 +166,12 @@
             border: 1px solid rgb(219, 214, 214);
             font-family: Arial, Helvetica, sans-serif;
            }
+           
+           .Sort:focus{
+               outline: none;
+ }
+          
+
            .box{
                font-size: 14px;
                color: #44475b;
@@ -184,7 +191,142 @@
                width: 60%;
                
            }
+
+
+
            
+           @media(max-width: 600px) { 
+
+           
+ 
+            .left{
+               display:none;
+              
+           }
+
+           .right{
+               margin-left:0px;
+               width:95%;
+               margin-top: 35px;
+               
+               
+           }
+
+           .icon{
+               width:28px;
+               height:28px;
+               padding:0px;
+               padding-right:4px;
+               
+
+           }
+
+           .MFdiv{
+               border: 1px solid rgb(219, 214, 214);
+               height:80px;
+               width:85%;
+               transition: 0.2s;
+               box-shadow: 0 2px 3px 0 #0000001a;
+               cursor: pointer;
+               
+           }
+
+           .returns{
+              
+            display:none;
+          }
+
+           .MFsub_text{
+               
+             
+
+               border:1px solid blue;
+               width:65%;
+               margin-top: 3px;
+               font-size: .62rem;
+               line-height: 160%;
+               color: #7c7e8c;
+               letter-spacing: .2px;
+               margin-left: 20%;
+           }
+
+           .MFsub_text2{
+               display:none;
+              
+               width:200px;
+               margin-top: 3px;
+               font-size: .78rem;
+               line-height: 160%;
+               color: #7c7e8c;
+               letter-spacing: .2px;
+               margin-left: 20%;
+              
+           }
+
+
+           .MFtext{
+            border:1px solid black;
+             margin-left: 2px;
+              width:70%;
+              font-size: 0.9rem;
+              letter-spacing: 0.01em;
+              color:#44475b;
+              font-weight: 600;
+              display:inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+             
+           }
+
+
+
+
+
+
+
+           .productTileOne{
+               
+               position: absolute;
+               margin-left:0;
+               padding:0;
+               font-size: small;
+               margin-top:3%;
+               width: 200px;
+               border: 1px solid brown;
+               height:30px;
+               
+           }
+
+           .head{
+               color:#44475b;
+               letter-spacing: .01em;
+               width:90%;
+               font-size: 0.9rem;
+               font-weight: 600;
+               display:inline-block;
+           }
+
+         
+
+          .Sort{
+               
+               margin-left: 0px;
+               margin-top: 1.5%;
+               width: 30px;
+               font-size: 5px;
+               padding:0;
+               height: 26px;
+               color:#7c7e8c;
+               border: 1px solid rgb(219, 214, 214);
+               font-family: Arial, Helvetica, sans-serif;
+              }
+              
+
+
+
+            }
+
 
        </style>
        
@@ -203,6 +345,8 @@
        </div> -->
 
        <nav class="max-w">
+        
+
         <div style="margin-top:20px"">
             <a href="groww_home.html"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
             <div class="search">
@@ -500,6 +644,7 @@
 </html>
 
 <script src="productapp.js">
+   
     
 
 </script>
