@@ -40,14 +40,21 @@ function showProduct(data){
 
     }
     parent.innerHTML = null;
+    let total_amount = 0;
 
     let cart_item= document.createElement('h3')
     cart_item.id = 'cart_item';
-cart_item.innerHTML = `My Cart(${data.length})`;
+cart_item.innerHTML = `My Cart (${data.length})`;
 parent.append(cart_item);
 
 
     data.forEach(({product_name,price,product_image},index) => {
+      
+        total_amount += Number(price);
+
+
+         
+
         let div = document.createElement('div');
         div.id = 'cart_view';
 
@@ -89,6 +96,8 @@ del.innerHTML = `<i class="material-icons">delete</i>`
     del.addEventListener('click',() => {
         remove(index);
     });
+let tml = document.getElementById('total_amount');
+tml.textContent = '₹'+ total_amount;
 
 })
 appendbtn();
@@ -103,7 +112,7 @@ function appendbtn(){
     btnFund.id = 'explore_fund';
 
     
-    btnFund.innerHTML = ` Explore More Funds`
+    btnFund.innerHTML = `ADD MORE FUNDS`
     btnFund.onclick = () => {
      window.location.href = `http://127.0.0.1:5502/Front%20end/groww_products.html`;
     }
@@ -125,3 +134,15 @@ function remove(index){
      localStorage.setItem('groww_cart',JSON.stringify(data));
        
 }
+
+
+function payment_page(){
+       let pay = document.getElementById('pay');
+    
+    pay.onclick = () => {
+
+        window.location.href = 'http://127.0.0.1:5502/Front%20end/groww_payment.html';
+    }
+    
+}
+payment_page();
