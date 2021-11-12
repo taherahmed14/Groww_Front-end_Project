@@ -876,7 +876,7 @@ li {
 
 /* -- mediaQuery -- TRiAl -- */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
   body{
     /* border: 1px solid black; */
