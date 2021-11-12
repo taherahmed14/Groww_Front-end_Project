@@ -12,17 +12,30 @@
 
     <style>
         /* * {
+            padding: 3px;
+            margin: 2px;
             border: 1px solid red;
-            margin: 3px;
-            padding: 5px;
         } */
+        
+        button,
+        input {
+            display: block;
+            background-color: transparent;
+            border: 1px solid red;
+            padding: 3px;
+            margin: 5px;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .payment-detail {
+            display: none;
+        }
         
         .open {
             display: block;
-        }
-        
-        .inp {
-            display: none;
         }
     </style>
 
@@ -60,78 +73,98 @@
     </nav>
 
 
-    <div id="container">
+    <div class="cards-container">
 
-    <div id="cards-container ">
-        <button class="disp " id="up ">
-        <p class="name " >UPI</p>
-
-        <div class="inp " id="upiContainer ">
-            <input type="text " name="UPIID " id="upi ">
-            <input type="button " value="Pay using UPI ">
+        <div id="upi" data-type="upi">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>UPI Payment</p>
+                </div>
+                <form action="" id="upiData" class="payment-detail">
+                    <input type="text" name="" id=""></input>
+                    <button type="submit">Pay via upi id</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class="disp " id="netb-b ">
-        <p class="name " id="netB-b ">Net Banking</p>
-        <div class="inp " id="netBankingContainer ">
-            <input type="text " name="Net Banking " id="netb ">
-            <input type="button " value="Pay using net banking ">
+        <div id="netBanking" data-type="netBanking">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>Pay via net banking</p>
+                </div>
+                <form action="" id="netBankingData" class="payment-detail">
+                    <input type="text" name="" id="">
+                    <button type="submit">Pay via net banking id</button>
+
+                </form>
+            </div>
         </div>
+
+        <div id="creditCard" data-type="creditCard">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>Pay through cc</p>
+                </div>
+                <form action="" id="creditCardData" class="payment-detail">
+                    <input type="text" name="" id="">
+                    <button type="submit">Pay with creditCard</button>
+                </form>
+            </div>
+        </div>
+
     </div>
-
-    <div class="disp ">
-
-
-                        <p class="name " id="cc-b ">Credit Card/ Debit Card</p>
-
-
-                        <div class="inp " id="creditCardContainer ">
-                        <input type="text " name="Credit Card " id="cc ">
-                        <input type="button " value="Pay using Credit Card ">
-                        </div>
-                        </div>
-                        </div>
-                        <div id="footer ">
-
-                            <!-- Add footer contents here -->
-                            
-                            </div>
-                            
 
     <script>
-        let upi = document.getElementById('upiContainer'),
-            netBanking = document.getElementById('netBankingContainer'),
-            creditCard = document.getElementById('creditCardContainer'),
-            container = document.getElementById('cards-container');
+        let arr = document.querySelectorAll("form");
+        arr.forEach(x => x.addEventListener('submit', paymentMethod));
+        let i = 0;
+
+        let selectedType = 'upi'
+
+        let upi = document.getElementById('upi');
+        let creditCard = document.getElementById('creditCard');
+        let netBanking = document.getElementById('netBanking');
+
+        const options = [upi,  netBanking, creditCard]
+
+        options.forEach((item, i, array) => {
+            const currentItem = i;
+
+            item.addEventListener('click', (e) => {
+
+                const currentType = e.path.filter(ele => {
+                const type = ele.dataset?.type;
+
+                    if(Boolean(type)) {
+                        selectedType = type
+                    }
+                })
+
+                if(selectedType === array[currentItem].id) {
+                    arr[currentItem].classList.add('open');
 
 
-        container.addEventListener('click', ()=>hideOthers());
+                    options.filter((item, i) => i!== currentItem).forEach(element => {
+                        const elemntForm = element.querySelector('form')
+                        elemntForm.classList.remove('open')
+                        
+                    })
+                }
+            })
+        })
 
-        /* upi.addEventListener('click', hideOthers);
-        netBanking.addEventListener('click', hideOthers);
-        creditCard.addEventListener('click', hideOthers); */
+        arr[0].classList.add('open')
 
 
-        function hideOthers(e) {
-            [upi, netBanking, creditCard].forEach(x => x.classList.remove('open'));
-            if (e.target.id == 'cc-b') {
-                creditCard.classList.add('open');
-                creditCard.classList.remove('inp');
-            } else if (e.target.id == 'upi-b') {
-                upi.classList.add('open');
-                upi.clasList.remove('inp');
-            } else {
-                netBanking.classList.add('open');
-                netBanking.classList.remove('inp');
-            }
-            //console.log(e.target.childNodes);
-            //e.target.style.background = 'red';
-            console.log(e.target.id);
+
+        function paymentMethod(e) {
+            e.preventDefault();
+            console.log('success!!!' + e.target.id)
         }
     </script>
-
-
 </body>
 
 </html>
