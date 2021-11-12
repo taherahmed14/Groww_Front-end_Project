@@ -444,6 +444,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     #container{
         width: 100%;
         display: block;
+        margin-left: -1%;
     }
     #leftContainer{
         width: 100%;
