@@ -17,6 +17,7 @@
     width: 100%;
     height: 50px;
     cursor: pointer;
+    background-color: white;
 }
 .dropDownDiv:hover{
    background-color: whitesmoke;

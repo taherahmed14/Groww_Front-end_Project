@@ -145,3 +145,29 @@ li {
 }
 
 /* <!-- -- footer - (END)-- --> */
+
+@media(max-width:376px){
+  .max-w {
+    max-width: 600px;
+    width: 100%;
+  }
+  .nav-div > div:nth-child(1) > a > img{
+    width: 80px;
+    height: 25px;
+    margin-left: 50px;
+  }
+  nav div .c-search {
+    margin-left: 20px;
+  }
+  #search {
+    height: 30px;
+    width: 200px;
+  }
+  nav div i {
+    margin-top: 8px;
+  }
+  #login-btn {
+    display: none;
+  }
+  
+}
