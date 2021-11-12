@@ -88,17 +88,16 @@ body {
   margin: 0 auto;
 }
 
-nav div {
+/* ----------- */
+
+.nav-div {
   display: flex;
-  /* margin-top: 20px; */
+  margin-top: 20px;
+  justify-content: space-between;
 }
 
-#logo {
-  width: 35%;
-}
-
-nav div .search {
-  margin-right: 120px;
+nav div .c-search {
+  margin-left: 120px;
 }
 
 #search {

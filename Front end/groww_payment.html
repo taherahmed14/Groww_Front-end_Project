@@ -10,6 +10,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/navbar.css">
 
+    <style>
+        /* * {
+            padding: 3px;
+            margin: 2px;
+            border: 1px solid red;
+        } */
+        
+        button,
+        input {
+            display: block;
+            background-color: transparent;
+            border: 1px solid red;
+            padding: 3px;
+            margin: 5px;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .payment-detail {
+            display: none;
+        }
+        
+        .open {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -26,28 +55,116 @@
     </div> -->
 
     <nav class="max-w">
-        <div style="margin-top:20px"">
-            <a href="groww_home.html"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
-            <div class="search">
+        <div class="nav-div">
+            <div><a href="groww_home.html"><img class=""
+                        src="https://bit.ly/3nMw3oc"
+                        width="148" height="40" alt="Groww Logo" itemprop="logo"></a>
+            </div>
+
+            <div class="c-search">
                 <i class="material-icons">search</i><input type="search" id="search"
                     placeholder="What are you looking for today?" />
             </div>
-            <a href="#"><button id="login-btn">Login/Register</button></a></li>
+
+            <div>
+                <a href="#"><button id="login-btn">Login/Register</button></a></li>
+            </div>
         </div>
     </nav>
 
-    <div id="container">
 
-        <!-- Add your contents here -->
+    <div class="cards-container">
+
+        <div id="upi" data-type="upi">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>UPI Payment</p>
+                </div>
+                <form action="" id="upiData" class="payment-detail">
+                    <input type="text" name="" id=""></input>
+                    <button type="submit">Pay via upi id</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="netBanking" data-type="netBanking">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>Pay via net banking</p>
+                </div>
+                <form action="" id="netBankingData" class="payment-detail">
+                    <input type="text" name="" id="">
+                    <button type="submit">Pay via net banking id</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div id="creditCard" data-type="creditCard">
+            <div>
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="">
+                    <p>Pay through cc</p>
+                </div>
+                <form action="" id="creditCardData" class="payment-detail">
+                    <input type="text" name="" id="">
+                    <button type="submit">Pay with creditCard</button>
+                </form>
+            </div>
+        </div>
 
     </div>
 
-    <div id="footer">
+    <script>
+        let arr = document.querySelectorAll("form");
+        arr.forEach(x => x.addEventListener('submit', paymentMethod));
+        let i = 0;
 
-        <!-- Add footer contents here -->
+        let selectedType = 'upi'
 
-    </div>
+        let upi = document.getElementById('upi');
+        let creditCard = document.getElementById('creditCard');
+        let netBanking = document.getElementById('netBanking');
 
+        const options = [upi,  netBanking, creditCard]
+
+        options.forEach((item, i, array) => {
+            const currentItem = i;
+
+            item.addEventListener('click', (e) => {
+
+                const currentType = e.path.filter(ele => {
+                const type = ele.dataset?.type;
+
+                    if(Boolean(type)) {
+                        selectedType = type
+                    }
+                })
+
+                if(selectedType === array[currentItem].id) {
+                    arr[currentItem].classList.add('open');
+
+
+                    options.filter((item, i) => i!== currentItem).forEach(element => {
+                        const elemntForm = element.querySelector('form')
+                        elemntForm.classList.remove('open')
+                        
+                    })
+                }
+            })
+        })
+
+        arr[0].classList.add('open')
+
+
+
+        function paymentMethod(e) {
+            e.preventDefault();
+            console.log('success!!!' + e.target.id)
+        }
+    </script>
 </body>
 
 </html>

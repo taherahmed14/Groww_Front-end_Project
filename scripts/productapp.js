@@ -16,6 +16,7 @@ let data ;
     })
 
 
+   
 
 
 var valuelist = document.getElementById('valueList')
@@ -25,6 +26,7 @@ var listArray = []
 var amcData=[] ;
 var CategoryData=[] ;
 var RiskData=[];
+var FundData=[];
 
 
 
@@ -93,12 +95,33 @@ for( let checkbox of F_boxes){
             // console.log("Catadataaa" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
-            
+            N_Fund_filter(Number(this.value));
            // No_amc(this.value)
         }
 
     })
 }
+
+
+function N_Fund_filter(x){
+    let arr = FundData.filter(function(a) {
+                      
+        var name = x;
+    return  a.fund_Category >= name ;
+
+    } );
+   
+   fund_cont=0;
+   FundData.push(...arr)
+   
+  // console.log("afteCfilte" , CategoryData)
+  view_after_Fund(arr)
+}
+
+
+
+
+
 
 function clear_Tick(){
     
@@ -108,14 +131,15 @@ function clear_Tick(){
 
 function Fund_filter(x){
     let arr = RiskData.filter(function(a) {
-       // console.log("filte", x)                     //// Discuss to change the data of CR and Add more Data
+    
         var name = x;
     return  a.fund_Category <= name ;
 
     } );
    // amcData = arr;
-   
+   FundData.push(...arr)
   // console.log("afteCfilte" , CategoryData)
+  parent.innerHTML = null;
   view_after_Fund(arr)
 }
 
@@ -123,13 +147,15 @@ let fund_cont=0;
 
 
 function view_after_Fund( d){
+
+   
     
-    if(fund_cont==0)
+    /*if(fund_cont==0)
     {
-        parent.innerHTML = null;
+        
         fund_cont++;
 
-    }
+    } */
    
     d.forEach( function ( el)
     {

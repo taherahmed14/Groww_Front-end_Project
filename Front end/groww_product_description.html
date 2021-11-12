@@ -15,15 +15,23 @@
 <body>
 
     <nav class="max-w">
-        <div style="margin-top:20px">
-            <a href="groww_home.html"><img id="logo" src="https://bit.ly/3nMw3oc" alt=""></a>
-            <div class="search">
+        <div class="nav-div">
+            <div><a href="groww_home.html"><img class=""
+                        src="https://bit.ly/3nMw3oc"
+                        width="148" height="40" alt="Groww Logo" itemprop="logo"></a>
+            </div>
+
+            <div class="c-search">
                 <i class="material-icons">search</i><input type="search" id="search"
                     placeholder="What are you looking for today?" />
             </div>
-            <a href="#"><button id="login-btn">Login/Register</button></a></li>
+
+            <div>
+                <a href="#"><button id="login-btn">Login/Register</button></a></li>
+            </div>
         </div>
     </nav>
+
 
     <div id="dropDown" class="noDropDownDisplay"></div>
 
@@ -301,8 +309,6 @@
 
     </div>
 
-     <!-- -- footer - (START)-- -->
-
  <div id="footer" style="margin-top:100px;">
 
     <div class="cover1">
@@ -434,10 +440,7 @@
     </div>
 
 </div>
-
-<!-- -- footer - (END)-- -->
-
-    
+ 
 </body>
 
 </html>
@@ -446,7 +449,6 @@
 
     import { showDescription, addToCart, goToCart, showMonthlySip, showOneTime, calendar } from "/scripts/product_desc_scripts.js";
     import { getData, appendingData, graph } from "/scripts/graph.js";
-    import {showData, deBounce } from "/scripts/search_box.js";
     getData();
 
     let addToCartBtn = document.getElementById("addToCartBtn");
@@ -469,11 +471,6 @@
         calendar();
     }
 
-    let searchInput = document.getElementById("search");
-
-    searchInput.oninput = () => {
-        deBounce(showData, 1000);
-    };
-
-
 </script>
+
+<script src="/scripts/search_box.js"></script>

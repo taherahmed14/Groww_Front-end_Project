@@ -165,8 +165,6 @@
     font-size: 17px;
     font-weight: 550;
 }
-
-
 .returnRankings{
     width: 100%;
     margin-top: 40px;
@@ -440,4 +438,44 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
       box-shadow: -80px 0 0 80px #00d09c;
     }
 
+}
+
+@media(max-width:376px){
+    #container{
+        width: 100%;
+        display: block;
+        margin-left: -1%;
+    }
+    #leftContainer{
+        width: 100%;
+    }
+    #rightContainer{
+        width: 100%;
+        position: absolute;
+        margin-top: 140%;
+    }
+    .proDetails{
+        margin-top: 40%;
+    }
+    .returnRankingsTable{
+        width: 100%;
+    }
+    .rowDetOne, .rowDet{
+        overflow: hidden;
+    }
+    .minAmountDetails > h3{
+        margin-top: 80px;
+    }
+    .minAmountDetails > div{
+        margin-top: 0;
+    }
+    #paymentNote{
+        margin: 44% 0 0 23%;
+    }
+    .rupeeSymbol{
+        margin: 20% 0 0 58%;
+    }
+    #calendarIcon{
+        margin: 33% 0 0 81%;
+    }
 }

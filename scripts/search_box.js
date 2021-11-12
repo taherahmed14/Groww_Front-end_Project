@@ -1,6 +1,11 @@
 
 let timerId;
 let dropdownBox = document.getElementById("dropDown");
+let searchInput = document.getElementById("search");
+searchInput.oninput = () => {
+    deBounce(showData, 1000);
+};
+
 function showData(){
     let inputValue = document.getElementById("search").value;
     fetch("http://localhost:3000/api/products")
@@ -66,4 +71,4 @@ function deBounce(func, delay){
     }, delay);
 }
 
-export { showData, deBounce }; 
+// export { showData, deBounce }; 
