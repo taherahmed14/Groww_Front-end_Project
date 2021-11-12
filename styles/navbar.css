@@ -56,6 +56,9 @@ nav div i {
   margin-left: 14px;
   cursor: pointer;
 }
+#thirdBox{
+  width: 160px;
+}
 
 #login-btn {
   height: 43px;
@@ -67,6 +70,22 @@ nav div i {
   border-radius: 4px;
   background-color: #00d09c;
   color: #fff;
+  cursor: pointer;
+}
+
+.dontDisplay{
+  display: none;
+}
+
+.afterLogin{
+  width: 160px;
+  display: flex;
+  position: absolute;
+  margin: -5px 0 0 -2px;
+}
+.afterLogin img{
+  width: 40px;
+  border-radius: 50px;
   cursor: pointer;
 }
 

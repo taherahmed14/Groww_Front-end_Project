@@ -838,3 +838,22 @@ li {
 }
 
 /* <!-- -- footer - (END)-- --> */
+
+#thirdBox{
+  width: 160px;
+}
+.dontDisplay{
+  display: none;
+}
+
+.afterLogin{
+  width: 160px;
+  display: flex;
+  position: absolute;
+  margin: -5px 0 0 -2px;
+}
+.afterLogin img{
+  width: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+}

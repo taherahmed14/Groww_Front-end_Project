@@ -8,6 +8,9 @@ function setFormMessage(formElement, type, message){
     messageElement.classList.add(`form__message--${type}`)
 }
 
+if(localStorage.getItem('check_Login') === null){
+    localStorage.setItem('check_Login', JSON.stringify([]));
+}
 
 function logIn(e){
     e.preventDefault();
@@ -24,6 +27,9 @@ function logIn(e){
         all_users.forEach(function(user){
 
             if(email === user.email && password === user.password){
+                let check = JSON.parse(localStorage.getItem('check_Login'));
+                check[0] = {status: "Logged In"};
+                localStorage.setItem('check_Login', JSON.stringify(check));
                 window.location.href = "groww_home.html"
             }else{
                 login_form.addEventListener("submit", e => {
@@ -31,7 +37,6 @@ function logIn(e){
                     setFormMessage(login_form, "error", 'Please enter valid credentials')
                 })
             }
-            
         })
 
 }
