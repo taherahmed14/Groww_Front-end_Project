@@ -1,4 +1,4 @@
-
+let container = document.getElementById('container');
 let data = JSON.parse(localStorage.getItem('groww_cart'));
 console.log(data);
 
@@ -6,15 +6,47 @@ let parent = document.getElementById('left_view_cart');
 console.log(parent);
 
 
-let cart_item = document.getElementById('cart_item');
-cart_item.innerHTML = `My Cart(${data.length})`;
-console.length = 
-console.log(cart_item);
+
+
+
+
+
 
 
 
 function showProduct(data){
+    if ( data.length == 0){
+        container.innerHTML = null
+        container.style.flexDirection = 'column';
+
+        let h1 = document.createElement('h1');
+        h1.id = 'heading';
+        h1.textContent = 'Uh-oh! Your Cart is Empty'
+
+
+        let img = document.createElement('img');
+        img.src = '//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/cart-empty.5f55a0d3.svg';
+         
+        let btnFund = document.createElement('button');
+        btnFund.id = 'explore_fund';
+
+        
+        btnFund.innerHTML = `Explore Funds`
+        btnFund.onclick = () => {
+         window.location.href = `http://127.0.0.1:5502/Front%20end/groww_products.html`;
+        }
+
+        container.append(h1,img,btnFund);
+
+    }
     parent.innerHTML = null;
+
+    let cart_item= document.createElement('h3')
+    cart_item.id = 'cart_item';
+cart_item.innerHTML = `My Cart(${data.length})`;
+parent.append(cart_item);
+
+
     data.forEach(({product_name,price,product_image},index) => {
         let div = document.createElement('div');
         div.id = 'cart_view';
@@ -46,6 +78,8 @@ del.innerHTML = `<i class="material-icons">delete</i>`
      dis.innerHTML = `<span>&#8377;</span>${price}`;
 
     bottom.append(amount,dis);
+
+  
     
     sub_sub_div.append(img,name);
  subdiv.append(sub_sub_div,del);
@@ -57,9 +91,24 @@ del.innerHTML = `<i class="material-icons">delete</i>`
     });
 
 })
+appendbtn();
 
 }
 showProduct(data);
+
+
+
+function appendbtn(){
+    let btnFund = document.createElement('button');
+    btnFund.id = 'explore_fund';
+
+    
+    btnFund.innerHTML = ` Explore More Funds`
+    btnFund.onclick = () => {
+     window.location.href = `http://127.0.0.1:5502/Front%20end/groww_products.html`;
+    }
+   parent.append(btnFund);
+}
 
 
 
