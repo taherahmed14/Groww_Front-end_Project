@@ -10,7 +10,7 @@ All the services are enabled to the users through its mobile and web application
 </tr>
 </table>
 
-## groww Clone
+## Groww Clone
 
 ### Sign up Page
 ![]()
@@ -39,7 +39,7 @@ Want to run in your local Machine? Great!
 
 To run, follow these steps:
 
-- Clone my repository `https://github.com/m-sehrawat/Adidas-Website-Clone`
+- Clone my repository `https://github.com/taherahmed14/Groww-Clone`
 - Open that code in your VS code `Project Files/Front end/groww_home.html`
 - Open the `groww_home.html` on Live server
 - Then you can Navigate through other pages from Home page like `groww_products.html`, `groww_product_description.html` etc
