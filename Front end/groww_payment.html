@@ -10,6 +10,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/navbar.css">
 
+    <style>
+        /* * {
+            border: 1px solid red;
+            margin: 3px;
+            padding: 5px;
+        } */
+        
+        .open {
+            display: block;
+        }
+        
+        .inp {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -46,15 +62,75 @@
 
     <div id="container">
 
-        <!-- Add your contents here -->
+    <div id="cards-container ">
+        <button class="disp " id="up ">
+        <p class="name " >UPI</p>
 
+        <div class="inp " id="upiContainer ">
+            <input type="text " name="UPIID " id="upi ">
+            <input type="button " value="Pay using UPI ">
+        </div>
     </div>
 
-    <div id="footer">
-
-        <!-- Add footer contents here -->
-
+    <div class="disp " id="netb-b ">
+        <p class="name " id="netB-b ">Net Banking</p>
+        <div class="inp " id="netBankingContainer ">
+            <input type="text " name="Net Banking " id="netb ">
+            <input type="button " value="Pay using net banking ">
+        </div>
     </div>
+
+    <div class="disp ">
+
+
+                        <p class="name " id="cc-b ">Credit Card/ Debit Card</p>
+
+
+                        <div class="inp " id="creditCardContainer ">
+                        <input type="text " name="Credit Card " id="cc ">
+                        <input type="button " value="Pay using Credit Card ">
+                        </div>
+                        </div>
+                        </div>
+                        <div id="footer ">
+
+                            <!-- Add footer contents here -->
+                            
+                            </div>
+                            
+
+    <script>
+        let upi = document.getElementById('upiContainer'),
+            netBanking = document.getElementById('netBankingContainer'),
+            creditCard = document.getElementById('creditCardContainer'),
+            container = document.getElementById('cards-container');
+
+
+        container.addEventListener('click', ()=>hideOthers());
+
+        /* upi.addEventListener('click', hideOthers);
+        netBanking.addEventListener('click', hideOthers);
+        creditCard.addEventListener('click', hideOthers); */
+
+
+        function hideOthers(e) {
+            [upi, netBanking, creditCard].forEach(x => x.classList.remove('open'));
+            if (e.target.id == 'cc-b') {
+                creditCard.classList.add('open');
+                creditCard.classList.remove('inp');
+            } else if (e.target.id == 'upi-b') {
+                upi.classList.add('open');
+                upi.clasList.remove('inp');
+            } else {
+                netBanking.classList.add('open');
+                netBanking.classList.remove('inp');
+            }
+            //console.log(e.target.childNodes);
+            //e.target.style.background = 'red';
+            console.log(e.target.id);
+        }
+    </script>
+
 
 </body>
 
