@@ -39,7 +39,7 @@ function signUp(e){
 
 
     let arr = JSON.parse(localStorage.getItem('users'))
-    let exist = arr.length && JSON.parse(localStorage.getItem("users")).every(user => user.email === email || user.mobileNumber === mobileNumber);
+    let exist = arr.length && JSON.parse(localStorage.getItem("users")).some(user => user.email === email || user.mobileNumber === mobileNumber);
 
     if(!exist){
         arr.push(user)
