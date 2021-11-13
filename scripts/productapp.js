@@ -32,11 +32,13 @@ var FundData=[];
 
 
 var checkboxes = document.querySelectorAll('.amctick');
+var amc_tick=0;
 
 for( let checkbox of checkboxes){
 
     checkbox.addEventListener('click' , function(){
         if(this.checked == true){
+            ++amc_tick;
             amc(this.value);
            // console.log(data)
         }else{
@@ -50,13 +52,23 @@ for( let checkbox of checkboxes){
 
 
 var c_boxes = document.querySelectorAll('.c_tick');
+var catagory_tick=0;
+
 
 for( let checkbox of c_boxes){
 
     checkbox.addEventListener('click' , function(){
-        if(this.checked == true){
+        
+        if(this.checked == true && amc_tick<=0){
+            ++catagory_tick;
+            console.log("first C invoke" , this.value)
+            first_C_filter(this.value);   
+                                  
+        }
+        else if(this.checked == true && amc_tick>=1){
+            ++catagory_tick;
             C_filter(this.value);
-            // console.log("Catadataaa" ,this.value)
+            // console.log("Cfilter" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
              N_C_filter(this.value)
@@ -66,6 +78,24 @@ for( let checkbox of c_boxes){
 
     })
 }
+
+
+function first_C_filter(x){
+    let arr = data.filter(function(a) {
+                       
+        var name = x;
+    return  a.category == name ;
+
+    } );
+   // amcData = arr;
+   CategoryData.push(...arr);
+  // console.log("afteCfilte" , CategoryData)
+  view_after_Catagory(arr)                                   
+}
+
+
+
+
 
 var R_boxes = document.querySelectorAll('.R_tick');
 

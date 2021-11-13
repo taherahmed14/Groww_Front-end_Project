@@ -1,71 +1,3 @@
-/* body{
-    margin: 0;
-}
-*{
-    font-family: sans-serif;
-}
-#header{
-    height: 80px;
-    display: flex;
-    border-bottom: 1px solid rgb(247, 235, 235);
-}
-#header img{
-    height: 50%;
-    margin: 1.3% 0 0 13%;
-    cursor: pointer;
-}
-#searchBox{
-    width: 30.5%;
-    height: 60%;
-    margin: 1.3% 0 0 17%;
-}
-#searchBox input{
-    width: 85%;
-    height: 60%;
-    padding: 5px;
-    padding-left: 40px;
-    font-size: 14px;
-    border: 1px solid rgb(219, 214, 214);
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px #f7f4f4;
-    outline: none;
-}
-#searchBox input:focus {
-    border: 1px solid rgb(219, 214, 214);
-}
-#searchBox i{
-    height: 20px;
-    position: absolute;
-    margin: 0.5% 0 0 0.8%;
-    color: gray;
-}
-#loginBtn{
-    height: 38%;
-    margin: 1.1% 0 0 5%;
-    padding: 12px 35px 0px 35px;
-    border: 1px solid #00d09c;
-    border-radius: 5px;
-    background-color: #00d09c;
-    color: white;
-    font-size: 15px;
-    font-weight: 550;
-    cursor: pointer;
-}
-#container{
-    width: 80%;
-    margin: 5% 10% 15% 10%;
-    display: flex;
-}
-#footer{
-    width: 99.8%;
-    height: 350px;
-    border: 1px solid black;
-    display: flex;
-    background-color: #242633;
-} */
-
-/* <!-- ================== new code =============== --> */
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,900&display=swap");
 
 * {
@@ -146,9 +78,9 @@ nav div i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 700px;
+  /* max-height: 700px; */
   min-height: 600px;
-  height: calc(100vh - 82px);
+  /* height: calc(100vh - 82px); */
   margin-top: 30px;
   margin-bottom: 60px;
 }
@@ -345,7 +277,7 @@ nav div i {
   filter: grayscale(0%);
 }
 
-.color-hover:hover{
+.color-hover:hover {
   border-bottom: 3px solid #00d09c;
 }
 
@@ -417,8 +349,8 @@ nav div i {
   margin-top: 26px;
 }
 
-/* ============ */
-.indicator {
+/* ------------------ */
+/* .indicator {
   position: absolute;
   width: 0;
   height: 3px;
@@ -426,8 +358,7 @@ nav div i {
   left: 0px;
   margin-top: -5px;
   transition: left 0.2s linear, width 0.2s linear;
-}
-
+} */
 /* ------------------ */
 
 #animation-div {
@@ -691,6 +622,14 @@ a {
   /* align-items: baseline; */
 }
 
+.invest-left-part {
+  width: 600px;
+}
+
+.invest-3-img {
+  margin-left: 30px;
+}
+
 .i-img-text {
   font-weight: 500;
   font-size: 20px;
@@ -837,23 +776,299 @@ li {
   margin: 0 4px;
 }
 
+#fot-section-2 {
+  width: 66%;
+}
+
 /* <!-- -- footer - (END)-- --> */
 
-#thirdBox{
+/* --- */
+
+#thirdBox {
   width: 160px;
 }
-.dontDisplay{
+.dontDisplay {
   display: none;
 }
 
-.afterLogin{
+.afterLogin {
   width: 160px;
   display: flex;
   position: absolute;
   margin: -5px 0 0 -2px;
 }
-.afterLogin img{
+.afterLogin img {
   width: 40px;
   border-radius: 50px;
   cursor: pointer;
+}
+
+/* --- */
+
+/* -- mediaQuery -- TRiAl -- */
+
+@media (max-width: 768px) {
+  .max-w {
+    /* max-width: 550px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-div div {
+    margin-top: 20px;
+  }
+
+  nav div .c-search {
+    margin-left: 0px;
+  }
+
+  #search {
+    width: 380px;
+  }
+
+  .thirdBox {
+    margin-bottom: 20px;
+    position: absolute;
+  }
+
+  #userAcc {
+    margin-left: 38px;
+  }
+
+  #cont1 {
+    flex-direction: column;
+    /* margin-top:100px; */
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+
+  .body-1 {
+    flex-direction: column;
+  }
+
+  .slides {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #cont {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #mid-text {
+    text-align: center;
+  }
+
+  #get-btn {
+    display: none;
+  }
+
+  /*  .chip-text-div {
+    text-align: center;
+  } */
+
+  .heading-text {
+    text-align: center;
+  }
+
+  #chip-text {
+    margin: 70px auto 40px;
+  }
+
+  .tab-wrapper {
+    /* flex-direction: row; */
+    overflow: auto;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tab-text1 {
+    padding-right: 0;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+
+  .color-hover {
+    margin: 0 15px;
+    width: 160%;
+  }
+
+  .color-hover:hover {
+    border-bottom: 3px solid #fff;
+  }
+
+  .tab-text2 {
+    position: inherit;
+  }
+
+  .mutual-fund {
+    margin-right: 50px;
+    margin-left: 20px;
+  }
+
+  .us-stocks {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  ::-webkit-scrollbar {
+    /* width: 0; */
+    /* background: transparent;  */
+    scrollbar-color: transparent;
+  }
+
+  .img-1 {
+    width: 450px;
+    height: 339px;
+    margin-left: 40px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .div-text {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  #animation-div {
+    width: 100%;
+    height: 700px;
+    margin-top: 200px;
+    background-image: url("//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/shield-groww.0d0cc15e.png");
+    /* background-position: center; */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position-x: -150px !important;
+    background-position-y: 50px !important;
+  }
+
+  .hs33TextWrapper {
+    margin-top: 361px;
+  }
+
+  .hs33Heading {
+    width: 450px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    margin-left: 25px;
+  }
+
+  .hs33Para {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /*   #section-three {
+    flex-direction: column;
+  }  */
+
+  #section-three-heading {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  #section-three-img {
+    flex-direction: column;
+    margin: auto 90px;
+    justify-content: center;
+  }
+
+  #section-three-img p {
+    /* font-weight: 500; */
+    /* text-align: center; */
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    margin-top: 25px;
+    color: #44475b !important;
+    margin-bottom: 20px;
+    margin-right: 155px;
+  }
+
+  .press-name {
+    flex-direction: column;
+  }
+
+  #testonomials .heading {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #testonomials .view-more {
+    flex-direction: column;
+  }
+
+  .view-more #para {
+    margin-bottom: 10px;
+  }
+
+  #card-div {
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 50px;
+  }
+
+  .invest-class {
+    flex-direction: column;
+  }
+
+  .invest-left-part {
+    width: 380px;
+  }
+
+  #three-img {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .invest-3-img {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .ss34Wrapper {
+    height: 710px;
+    /* text-align: center; */
+    border-radius: 0;
+  }
+  .ss34TextWrapper {
+    margin-left: 10px;
+  }
+
+  .ss34Img {
+    right: 130px;
+  }
+
+  .footer-1 {
+    margin-left: 135px;
+  }
+
+  #fot-section-2 {
+    margin-right: 5px;
+    width: 95%;
+  }
+
+  .copyRight {
+    flex-direction: column;
+  }
+
+  .socialMedia {
+    margin-left: -23px;
+  }
 }

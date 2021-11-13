@@ -1,0 +1,80 @@
+#right_view_cart {
+    margin-left: 3rem;
+    flex: 1;
+    box-sizing: border-box;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+    padding: 0 20px;
+}
+
+#amount-payable {
+    background-color: #eee;
+    padding: 1px;
+}
+
+.inputBox {
+    display: block;
+    width: 100%;
+}
+
+.inputBox::placeholder {
+    color: #999;
+}
+
+.inputBox:focus {
+    outline: 0;
+}
+
+.turkishButtons {
+    /* width: 200 px;
+    height: 43 px;
+    margin: auto;
+    padding: 10 px;
+    margin-top: 50 px;
+    cursor: pointer;
+    background-color: #00d09c;
+    border: none;
+    border-radius: 4 px;*/
+    font-weight: 550;
+    color: white;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #00ca9b;
+}
+
+.underline {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #00d09c;
+}
+
+
+/* button,
+input {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid red;
+    padding: 3px;
+    margin: 5px;
+} */
+
+.flex {
+    display: flex;
+}
+
+.flex>div:last-child {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.payment-detail {
+    display: none;
+}
+
+.open {
+    display: block;
+}

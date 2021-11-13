@@ -18,6 +18,7 @@
     height: 50px;
     cursor: pointer;
     background-color: white;
+    border-bottom: 1px solid rgb(231, 228, 228);
 }
 .dropDownDiv:hover{
    background-color: whitesmoke;
@@ -26,5 +27,4 @@
     width: 80%;
     margin: 0% 10% 0 10%;
     padding-top: 15px;
-    border-bottom: 1px solid rgb(231, 228, 228);
 }
