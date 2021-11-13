@@ -32,11 +32,13 @@ var FundData=[];
 
 
 var checkboxes = document.querySelectorAll('.amctick');
+var amc_tick=0;
 
 for( let checkbox of checkboxes){
 
     checkbox.addEventListener('click' , function(){
         if(this.checked == true){
+            ++amc_tick;
             amc(this.value);
            // console.log(data)
         }else{
@@ -50,13 +52,23 @@ for( let checkbox of checkboxes){
 
 
 var c_boxes = document.querySelectorAll('.c_tick');
+var catagory_tick=0;
+
 
 for( let checkbox of c_boxes){
 
     checkbox.addEventListener('click' , function(){
-        if(this.checked == true){
+        
+        if(this.checked == true && amc_tick<=0){
+            ++catagory_tick;
+            console.log("first C invoke" , this.value)
+            first_C_filter(this.value);   
+                                  
+        }
+        else if(this.checked == true && amc_tick>=1){
+            ++catagory_tick;
             C_filter(this.value);
-            // console.log("Catadataaa" ,this.value)
+            // console.log("Cfilter" ,this.value)
         }else{
             console.log("you unchecked" , this.value)
              N_C_filter(this.value)
@@ -67,12 +79,37 @@ for( let checkbox of c_boxes){
     })
 }
 
+
+function first_C_filter(x){
+    let arr = data.filter(function(a) {
+                       
+        var name = x;
+    return  a.category == name ;
+
+    } );
+   // amcData = arr;
+   CategoryData.push(...arr);
+  
+  view_after_Catagory(arr)                                   
+}
+
+
+
+
+
 var R_boxes = document.querySelectorAll('.R_tick');
+var risk_tick=0
 
 for( let checkbox of R_boxes){
 
     checkbox.addEventListener('click' , function(){
-        if(this.checked == true){
+        if(this.checked == true && (amc_tick<=0 && catagory_tick<=0) )
+        {   
+            ++risk_tick;
+            first_R_filter(this.value);
+        }
+        else if(this.checked == true){
+            ++risk_tick;
             R_filter(this.value);
             // console.log("Catadataaa" ,this.value)
         }else{
@@ -85,12 +122,33 @@ for( let checkbox of R_boxes){
 }
 
 
+function first_R_filter(x){
+    let arr = data.filter(function(a) {
+                    
+        var name = x;
+    return  a.risk == name ;
+
+    } );
+   // amcData = arr;
+   RiskData.push(...arr)
+  
+   view_after_Risk(arr)
+}
+
+
+
+
 var F_boxes = document.querySelectorAll('.F_tick');
 
 for( let checkbox of F_boxes){
 
     checkbox.addEventListener('click' , function(){
-        if(this.checked == true){
+        if(this.checked == true && (amc_tick<=0 && catagory_tick<=0 && risk_tick<=0) )
+        {
+            first_Fund_filter(this.value)
+
+        }
+       else if(this.checked == true){
             Fund_filter(Number(this.value));
             // console.log("Catadataaa" ,this.value)
         }else{
@@ -101,6 +159,22 @@ for( let checkbox of F_boxes){
 
     })
 }
+
+
+function first_Fund_filter(x){
+    let arr = data.filter(function(a) {
+    
+        var name = x;
+    return  a.fund_Category <= name ;
+
+    } );
+   // amcData = arr;
+   FundData.push(...arr)
+  // console.log("afteCfilte" , CategoryData)
+  parent.innerHTML = null;
+  view_after_Fund(arr)
+}
+
 
 
 function N_Fund_filter(x){

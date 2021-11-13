@@ -1,71 +1,3 @@
-/* body{
-    margin: 0;
-}
-*{
-    font-family: sans-serif;
-}
-#header{
-    height: 80px;
-    display: flex;
-    border-bottom: 1px solid rgb(247, 235, 235);
-}
-#header img{
-    height: 50%;
-    margin: 1.3% 0 0 13%;
-    cursor: pointer;
-}
-#searchBox{
-    width: 30.5%;
-    height: 60%;
-    margin: 1.3% 0 0 17%;
-}
-#searchBox input{
-    width: 85%;
-    height: 60%;
-    padding: 5px;
-    padding-left: 40px;
-    font-size: 14px;
-    border: 1px solid rgb(219, 214, 214);
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px #f7f4f4;
-    outline: none;
-}
-#searchBox input:focus {
-    border: 1px solid rgb(219, 214, 214);
-}
-#searchBox i{
-    height: 20px;
-    position: absolute;
-    margin: 0.5% 0 0 0.8%;
-    color: gray;
-}
-#loginBtn{
-    height: 38%;
-    margin: 1.1% 0 0 5%;
-    padding: 12px 35px 0px 35px;
-    border: 1px solid #00d09c;
-    border-radius: 5px;
-    background-color: #00d09c;
-    color: white;
-    font-size: 15px;
-    font-weight: 550;
-    cursor: pointer;
-}
-#container{
-    width: 80%;
-    margin: 5% 10% 15% 10%;
-    display: flex;
-}
-#footer{
-    width: 99.8%;
-    height: 350px;
-    border: 1px solid black;
-    display: flex;
-    background-color: #242633;
-} */
-
-/* <!-- ================== new code =============== --> */
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,900&display=swap");
 
 * {
@@ -345,7 +277,7 @@ nav div i {
   filter: grayscale(0%);
 }
 
-.color-hover:hover{
+.color-hover:hover {
   border-bottom: 3px solid #00d09c;
 }
 
@@ -417,8 +349,8 @@ nav div i {
   margin-top: 26px;
 }
 
-/* ============ */
-.indicator {
+/* ------------------ */
+/* .indicator {
   position: absolute;
   width: 0;
   height: 3px;
@@ -426,8 +358,7 @@ nav div i {
   left: 0px;
   margin-top: -5px;
   transition: left 0.2s linear, width 0.2s linear;
-}
-
+} */
 /* ------------------ */
 
 #animation-div {
@@ -691,12 +622,12 @@ a {
   /* align-items: baseline; */
 }
 
-.invest-left-part{
-  width:600px;
+.invest-left-part {
+  width: 600px;
 }
 
 .invest-3-img {
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .i-img-text {
@@ -845,28 +776,28 @@ li {
   margin: 0 4px;
 }
 
-#fot-section-2{
-  width:66%;
+#fot-section-2 {
+  width: 66%;
 }
 
 /* <!-- -- footer - (END)-- --> */
 
 /* --- */
 
-#thirdBox{
+#thirdBox {
   width: 160px;
 }
-.dontDisplay{
+.dontDisplay {
   display: none;
 }
 
-.afterLogin{
+.afterLogin {
   width: 160px;
   display: flex;
   position: absolute;
   margin: -5px 0 0 -2px;
 }
-.afterLogin img{
+.afterLogin img {
   width: 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -877,10 +808,6 @@ li {
 /* -- mediaQuery -- TRiAl -- */
 
 @media (max-width: 768px) {
-
-  body{
-    /* border: 1px solid black; */
-  }
   .max-w {
     /* max-width: 550px; */
     width: 100%;
@@ -904,12 +831,12 @@ li {
     width: 380px;
   }
 
-  .thirdBox{
+  .thirdBox {
     margin-bottom: 20px;
     position: absolute;
   }
 
-  #userAcc{
+  #userAcc {
     margin-left: 38px;
   }
 
@@ -918,8 +845,8 @@ li {
     /* margin-top:100px; */
   }
 
-  .content{
-    margin-top:50px;
+  .content {
+    margin-top: 50px;
   }
 
   .body-1 {
@@ -944,12 +871,12 @@ li {
     display: none;
   }
 
- /*  .chip-text-div {
+  /*  .chip-text-div {
     text-align: center;
   } */
 
-  .heading-text{
-      text-align:center;
+  .heading-text {
+    text-align: center;
   }
 
   #chip-text {
@@ -996,7 +923,7 @@ li {
     /* width: 0; */
     /* background: transparent;  */
     scrollbar-color: transparent;
-}
+  }
 
   .img-1 {
     width: 450px;
@@ -1141,7 +1068,7 @@ li {
     flex-direction: column;
   }
 
-  .socialMedia{
+  .socialMedia {
     margin-left: -23px;
   }
 }
