@@ -48,7 +48,6 @@ function signUp(e){
             
         }else{
                 signup_form.addEventListener("submit", e => {
-                    // e.preventDefault()
                     setFormMessage(signup_form, 'error', "User alerady exist...! Please Login")
                     signup_form.classList.remove("form__message--error")
                 })
@@ -56,7 +55,6 @@ function signUp(e){
             
     }else{
         signup_form.addEventListener("submit", e => {
-            // e.preventDefault()
             setFormMessage(signup_form, 'error', "Please enter 10 Digit Mobile Number")
             signup_form.classList.remove("form__message--error")
         })
