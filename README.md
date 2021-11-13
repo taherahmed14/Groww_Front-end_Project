@@ -1,4 +1,4 @@
-# [groww](https://www.adidas.co.in/search)
+# [groww](https://github.com/taherahmed14/Groww-Clone)
 
 <table>
 <tr>
@@ -13,7 +13,7 @@ All the services are enabled to the users through its mobile and web application
 ## Groww Clone
 
 ### Sign up Page
-![]()
+![](https://github.com/taherahmed14/Groww-Clone/blob/main/Groww%20Clone%20Screenshots/Groww%20Signup.png)
 
 ### Home Page
 ![](https://github.com/taherahmed14/Groww-Clone/blob/main/Groww%20Clone%20Screenshots/Groww%20Home%20Page.png)
@@ -25,10 +25,10 @@ All the services are enabled to the users through its mobile and web application
 ![](https://github.com/taherahmed14/Groww-Clone/blob/main/Groww%20Clone%20Screenshots/Groww%20Product%20Description.png)
 
 ### Checkout Page
-![]()
+![](https://github.com/taherahmed14/Groww-Clone/blob/main/Groww%20Clone%20Screenshots/Groww%20Cart%20Page.png)
 
 ### Payment Page
-![]()
+![](https://github.com/taherahmed14/Groww-Clone/blob/main/Groww%20Clone%20Screenshots/Groww%20Payment%20Page.png)
 
 
 
@@ -40,8 +40,9 @@ Want to run in your local Machine? Great!
 To run, follow these steps:
 
 - Clone my repository `https://github.com/taherahmed14/Groww-Clone`
-- Open that code in your VS code `Project Files/Front end/groww_home.html`
+- Open that code in your VS code `Front end/groww_home.html`
 - Open the `groww_home.html` on Live server
+- Initialise the server `node server.js`
 - Then you can Navigate through other pages from Home page like `groww_products.html`, `groww_product_description.html` etc
 
 
@@ -50,7 +51,7 @@ To run, follow these steps:
 - HTML
 - CSS
 - Advance JavaScript (ES6)
-- Chrome DevTools
+- DOM
 - Basics of node js
 - Chart.js
 
