@@ -16,7 +16,7 @@ body{
 
 
 .container{
-    width: 700px;
+    width: 60%;
     max-width: 500px;
     padding: 2rem;
     height: 100%;
@@ -134,7 +134,7 @@ body{
 .main{
     display: flex;
     margin-right: 2rem;
-    width: 70%;
+    width: 60%;
     max-width: 100%;
     
 }
