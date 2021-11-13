@@ -10,7 +10,6 @@
     <link rel="icon" href="https://groww.in/logo-groww270.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/cart.css">
-    <link rel="stylesheet" href="/styles/payment_methods.css">
 
 
 </head>
@@ -45,63 +44,14 @@
         <div id="left_view_cart"></div>
 
         <div id="right_view_cart">
-            <div class="cards-container">
-                <div>
-                    <p>Amount payable : <span id="amount-payable">0</span></p>
-                </div>
-
-                <div id="upi" data-type="upi">
-                    <div class="flex">
-                        <div>
-                            <img src='/icons/bhim.svg' alt="" width="40">
-
-                        </div>
-                        <div>
-                            <p>UPI Payment</p>
-                            <form action="" id="upiData" class="payment-detail">
-                                <input type="text" name="" id="" class="underline inputBox" placeholder="Enter UPI ID"></input>
-                                <button type="submit" class="turkishButtons">Pay via upi id</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="netBanking" data-type="netBanking">
-                    <div class="flex">
-                        <div>
-                            <img src="/icons/net-banking.svg" alt="" width="40">
-                        </div>
-                        <div>
-                            <p>Pay via net banking</p>
-                            <form action="" id="netBankingData" class="payment-detail">
-                                <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Net Banking">
-                                <button type="submit" class="turkishButtons">Pay via net banking id</button>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="creditCard" data-type="creditCard">
-                    <div class="flex">
-                        <div>
-                            <img src="/icons/credit-card.svg" alt="" width="40">
-
-                        </div>
-                        <div>
-                            <p>PAY VIA CREDIT CARD</p>
-                            <form action="" id="creditCardData" class="payment-detail">
-                                <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Credit Card Number">
-                                <button type="submit" class="turkishButtons">Pay with creditCard</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+            <h3 id="total_amount_headline">Amount Payable now</h3>
+        <h1 id="total_amount"></h1>
+        <img src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/secure-cart-page.382d7372.svg">
+        <p class="safe"> 100% SAFE AND SECURE</p>
+        <p>By Contnuing, you are agree to <a href='#'>Terms and Conditions</a></p>
+        <button id="pay">PROCEED TO PAY</button> 
+    </div>
+        
 
     </div>
 
@@ -116,6 +66,5 @@
 
 <script src="/scripts/cart.js"></script>
 <script src="/scripts/changeNavbar.js"></script>
-<script src="/scripts/payment_metods.js"></script>
 
 </html>

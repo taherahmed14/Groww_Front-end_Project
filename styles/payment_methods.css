@@ -1,14 +1,23 @@
+#container{
+ display: flex;
+ justify-content: space-between;
+ color: #44475B;
+}
 #right_view_cart {
-    margin-left: 3rem;
-    flex: 1;
+    width: 370px;
+  height: 370px;
     box-sizing: border-box;
-    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
-    padding: 0 20px;
+    padding: 20px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 }
 
 #amount-payable {
     background-color: #eee;
+    font-size: 16px;
     padding: 1px;
+}
+#upi > p {
+    margin-top: 10px;
 }
 
 .inputBox {
@@ -64,11 +73,18 @@ input {
 
 .flex {
     display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
 }
+.flex p {
+    margin-top: 10px;
+}
+
 
 .flex>div:last-child {
     flex: 1;
     margin-left: 2rem;
+    border-bottom: none;
 }
 
 .payment-detail {
@@ -77,4 +93,11 @@ input {
 
 .open {
     display: block;
+}
+.align_center {
+    align-items: center;
+
+}
+#last_div{
+    border-bottom: none;
 }

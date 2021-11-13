@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/payment_methods.css">
 
     <style>
         /* * {
@@ -25,6 +26,9 @@
             border: 1px solid red;
             padding: 3px;
             margin: 5px;
+        }
+        button {
+            cursor: pointer;
         }
         
         .flex {
@@ -75,51 +79,68 @@
    <div id="container">
     <div id="left_view_cart"></div>
 
-    <div class="cards-container">
-
-        <div id="upi" data-type="upi">
-            <div>
-                <div class="flex">
-                    <img src="https://via.placeholder.com/40" alt="">
-                    <p>UPI Payment</p>
-                </div>
-                <form action="" id="upiData" class="payment-detail">
-                    <input type="text" name="" id=""></input>
-                    <button type="submit">Pay via upi id</button>
-                </form>
+    <div id="right_view_cart">
+        <div class="cards-container">
+            <div >
+                <p>Amount payable : <span id="total_amount">0</span></p>
             </div>
-        </div>
 
-        <div id="netBanking" data-type="netBanking">
-            <div>
-                <div class="flex">
-                    <img src="https://via.placeholder.com/40" alt="">
-                    <p>Pay via net banking</p>
+            <div id="upi" data-type="upi">
+                <div class="flex align_center">
+                    <div>
+                        <img src='/icons/bhim.svg' alt="" width="40">
+
+                    </div>
+                    <div>
+                        <p >UPI Payment</p>
+                        <form action="" id="upiData" class="payment-detail">
+                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter UPI ID"></input>
+                            <button type="submit" class="turkishButtons">Pay via upi id</button>
+                        </form>
+                    </div>
+
                 </div>
-                <form action="" id="netBankingData" class="payment-detail">
-                    <input type="text" name="" id="">
-                    <button type="submit">Pay via net banking id</button>
-
-                </form>
             </div>
-        </div>
 
-        <div id="creditCard" data-type="creditCard">
-            <div>
-                <div class="flex">
-                    <img src="https://via.placeholder.com/40" alt="">
-                    <p>Pay through cc</p>
+            <div id="netBanking" data-type="netBanking">
+                <div class="flex align_center">
+                    <div>
+                        <img src="/icons/net-banking.svg" alt="" width="40">
+                    </div>
+                    <div>
+                        <p>Pay via net banking</p>
+                        <form action="" id="netBankingData" class="payment-detail">
+                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Net Banking">
+                            <button type="submit" class="turkishButtons">Pay via net banking id</button>
+
+                        </form>
+                    </div>
                 </div>
-                <form action="" id="creditCardData" class="payment-detail">
-                    <input type="text" name="" id="">
-                    <button type="submit">Pay with creditCard</button>
-                </form>
             </div>
+
+            <div id="creditCard" data-type="creditCard">
+                <div class="flex align_center" id="last_div">
+                    <div>
+                        <img src="/icons/credit-card.svg" alt="" width="40">
+
+                    </div>
+                    <div>
+                        <p>PAY VIA CREDIT CARD</p>
+                        <form action="" id="creditCardData" class="payment-detail">
+                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Credit Card Number">
+                            <button type="submit" class="turkishButtons">Pay with creditCard</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+
 </div>
 <script src="/scripts/payment.js"></script>
+<script src="/scripts/payment_metods.js"></script>
 
     <script>
         let arr = document.querySelectorAll("form");

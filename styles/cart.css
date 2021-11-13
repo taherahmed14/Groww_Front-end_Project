@@ -113,19 +113,19 @@ margin-top: 0;
   font-weight: 400;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   text-align: center;
-  width: 350px;
-  height: 350px;
+  width: 370px;
+  height: 370px;
 }
 #right_view_cart img{
   margin-top: 10px;
 }
 #right_view_cart p {
   font-size: small;
-  color: rgb(173, 172, 172);
+  color: #44475B;
 }
 #right_view_cart .safe{
   margin-bottom: 30px;
-  color: rgb(173, 172, 172);
+  color: #44475B;
 }
 
 
