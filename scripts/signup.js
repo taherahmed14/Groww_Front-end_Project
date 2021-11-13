@@ -37,26 +37,28 @@ function signUp(e){
         mobileNumber
     }
 
-    let arr = JSON.parse(localStorage.getItem('users'))
-    let exist = arr.length && JSON.parse(localStorage.getItem("users")).some(user => user.email === email || user.mobileNumber === mobileNumber);
-
-    if(!exist){
-        arr.push(user)
-        localStorage.setItem('users', JSON.stringify(arr));
-        window.location.href = "../Front end/groww_login.html"
+    if(user.mobileNumber.length === 10){
+        let arr = JSON.parse(localStorage.getItem('users'))
+        let exist = arr.length && JSON.parse(localStorage.getItem("users")).some(user => user.email === email || user.mobileNumber === mobileNumber);
         
+        if(!exist){
+            arr.push(user)
+            localStorage.setItem('users', JSON.stringify(arr));
+            window.location.href = "../Front end/groww_login.html"
+            
+        }else{
+                signup_form.addEventListener("submit", e => {
+                    // e.preventDefault()
+                    setFormMessage(signup_form, 'error', "User alerady exist...! Please Login")
+                    signup_form.classList.remove("form__message--error")
+                })
+            }
+            
     }else{
-        alert("user already there")
-            signup_form.addEventListener("submit", e => {
-                // e.preventDefault()
-                setFormMessage(signup_form, 'error', "Please enter the details")
-                signup_form.classList.remove("form__message--error")
-            })
         signup_form.addEventListener("submit", e => {
             // e.preventDefault()
-            setFormMessage(signup_form, 'error', "User alerady exist...! Please Login")
+            setFormMessage(signup_form, 'error', "Please enter 10 Digit Mobile Number")
             signup_form.classList.remove("form__message--error")
         })
     }
-
 }
