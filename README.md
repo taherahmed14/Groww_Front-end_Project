@@ -1,4 +1,4 @@
-# [groww](https://github.com/taherahmed14/Groww-Clone)
+# [Groww](https://github.com/taherahmed14/Groww-Clone)
 
 <table>
 <tr>
@@ -42,7 +42,7 @@ To run, follow these steps:
 - Clone my repository `https://github.com/taherahmed14/Groww-Clone`
 - Open that code in your VS code `Front end/groww_home.html`
 - Open the `groww_home.html` on Live server
-- Initialise the server `node server.js`
+- Initialise the server `node server.js` on terminal
 - Then you can Navigate through other pages from Home page like `groww_products.html`, `groww_product_description.html` etc
 
 
