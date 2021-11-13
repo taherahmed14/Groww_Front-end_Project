@@ -42,5 +42,6 @@ arr[0].classList.add('open')
 
 function paymentMethod(e) {
     e.preventDefault();
-    console.log('success!!!' + e.target.id)
+    // console.log('success!!!' + e.target.id);
+    window.location.href = "groww_successPage.html";
 }
