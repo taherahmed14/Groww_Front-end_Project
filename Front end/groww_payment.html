@@ -98,7 +98,7 @@
                     <div>
                         <p >UPI Payment</p>
                         <form action="" id="upiData" class="payment-detail">
-                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter UPI ID"></input>
+                            <input type="text" name="" id="vpa" class="underline inputBox" placeholder="Enter UPI ID"></input>
                             <button type="submit" class="turkishButtons">Pay via upi id</button>
                         </form>
                     </div>
@@ -114,7 +114,7 @@
                     <div>
                         <p>Pay via net banking</p>
                         <form action="" id="netBankingData" class="payment-detail">
-                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Net Banking">
+                            <input type="text" name="" id="username" class="underline inputBox" placeholder="Enter Net Banking">
                             <button type="submit" class="turkishButtons">Pay via net banking id</button>
 
                         </form>
@@ -131,7 +131,7 @@
                     <div>
                         <p>PAY VIA CREDIT CARD</p>
                         <form action="" id="creditCardData" class="payment-detail">
-                            <input type="text" name="" id="" class="underline inputBox" placeholder="Enter Credit Card Number">
+                            <input type="text" name="" id="creditCardNumber" class="underline inputBox" placeholder="Enter Credit Card Number">
                             <button type="submit" class="turkishButtons">Pay with creditCard</button>
                         </form>
                     </div>
@@ -146,7 +146,7 @@
 <script src="/scripts/payment.js"></script>
 <script src="/scripts/payment_metods.js"></script>
 
-    <script>
+<!--     <script>
         let arr = document.querySelectorAll("form");
         arr.forEach(x => x.addEventListener('submit', paymentMethod));
         let i = 0;
@@ -191,9 +191,9 @@
 
         function paymentMethod(e) {
             e.preventDefault();
-            console.log('success!!!' + e.target.id)
+            console.log('success!!!' + e.target)
         }
-    </script>
+    </script> -->
     <script src="/scripts/changeNavbar.js"></script>
 </body>
 
