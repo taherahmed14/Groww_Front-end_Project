@@ -190,3 +190,23 @@ li {
   }
   
 }
+
+.noDropDownDisplay{
+  display: none;
+}
+.displayDropDown{
+  position: absolute;
+  width: 100px;
+  margin-left: 1150px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#logOutDropDown:hover{
+  background-color: whitesmoke;
+}
+.logout{
+  padding: 5px 5px 5px 15px;
+  font-size: 14px;
+}
